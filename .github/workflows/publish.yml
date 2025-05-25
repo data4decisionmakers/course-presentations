@@ -1,36 +1,50 @@
-on:
-  workflow_dispatch:
-  push:
-    branches: main
+name: Quarto publish
 
-name: Quarto Publish
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    container: rocker/tidyverse:4.5.0
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     permissions:
       contents: write
+      deployments: write
+      pull-requests: write
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
+      - uses: actions/checkout@v4
+      
+      - name: Install system dependencies
+        run: |
+          apt-get update && apt-get install -y --no-install-recommends \
+          libxt6 libglpk-dev gh curl jq rsync
+          
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
-
-      - name: Install R
-        uses: r-lib/actions/setup-r@v2
         with:
-          r-version: '4.2.0'
+          tinytex: true
 
-      - name: Install R Dependencies
+      - name: Install packages from renv.lock (with cache)
+        if: ${{ !env.ACT }}  
         uses: r-lib/actions/setup-renv@v2
         with:
-          cache-version: 1
+          cache-version: 2
 
-      - name: Render and Publish
-        uses: quarto-dev/quarto-actions/publish@v2
+      - name: Install packages from renv.lock (local, no cache)
+        if: ${{ env.ACT }}  
+        run: |
+          renv::restore()
+        shell: Rscript {0}
+        
+      - name: Render slides
+        run: |
+          quarto render
+      
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          target: gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
+          folder: _slides
