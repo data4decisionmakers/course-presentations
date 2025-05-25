@@ -1,0 +1,264 @@
+---
+title: "Introduction"
+subtitle: "Data-driven Decision-making"
+title-slide-attributes: 
+  data-background-color: "#002147"
+---
+
+## Background {.center}
+
+::: {.notes}
+
+In an era defined by information, the ability to make sound decisions increasingly hinges on the intelligent use of data. Across sectors and industries, from healthcare and education to finance and public policy, decision-makers are confronted with unprecedented volumes of information. Yet, it is not the sheer quantity of data that holds value, but our capacity to interpret, understand, and apply it effectively.
+
+Data is more than numbers on a spreadsheet; it is the language of modern insight. When approached with the right tools and understanding, it becomes a powerful asset for identifying patterns, predicting outcomes, evaluating strategies, and ultimately, improving results. For decision-makers, this means developing fluency not just in reading reports, but in questioning assumptions, validating sources, and interpreting results within context.
+
+Understanding modern data concepts - from statistical reasoning and data visualisation to machine learning and real-time analytics - is no longer optional. It is foundational. These concepts empower leaders to move beyond intuition and anecdote, and toward evidence-based action. As data continues to shape the world around us, the ability to engage with it critically and creatively is becoming an essential skill.
+
+This course aims to equip its participants with both the conceptual grounding and practical knowledge to navigate this landscape. Whether you are a seasoned executive, a policy analyst, or an emerging leader, this course is designed to bridge the gap between data science and decision-making. It demystifies the tools and techniques of modern data analysis and offers real-world applications that demonstrate how data can drive progress and innovation.
+
+Good decisions are not just supported by data; they are shaped by those who know how to use it wisely.
+
+:::
+
+## Data-driven decision-making
+
+* refers to the process of making decisions based on **data and information** rather than **intuition or experience** alone
+
+* involves _collecting_, _analysing_, _interpreting_, and _presenting_ data to support decision-making processes
+
+* goal is to make **objective, evidence-based decisions** that are more _accurate_, _consistent_, and _transparent_.
+
+::: {.notes}
+
+Data-driven decision-making or DDDM refers to the process of making decisions based on data and information rather than intuition or experience alone. It involves collecting, analysing, interpreting, and presenting data to support decision-making processes.
+
+In this approach, decisions are made by relying on facts, figures, trends patterns, and insights derived from data. The goal is to make objective, evidence-based decisions that are more accurate, consistent, and transparent.
+
+:::
+
+## Features of data-driven decision-making
+
+* **Informed Decisions** - make decisions based on data rather than assumptions or guesswork;
+
+* **Improved Accuracy** - educe errors and biases by relying on objective information;
+
+* **Efficiency** - Optimise resources and processes by identifying trends, patterns, and inefficiencies;
+
+::: {.notes}
+
+* **Informed Decisions** - make decisions based on data rather than assumptions or guesswork;
+
+* **Improved Accuracy** - educe errors and biases by relying on objective information;
+
+* **Efficiency** - Optimise resources and processes by identifying trends, patterns, and inefficiencies;
+
+:::
+
+## Features of data-driven decision-making
+
+* **Transparency** - ensure that decisions are made in an open and transparent manner; and,
+
+* **Scalabilit**y - Apply to large-scale operations or complex problems where traditional methods may be insufficient.
+
+::: {.notes}
+
+* **Transparency** - ensure that decisions are made in an open and transparent manner; and,
+
+* **Scalabilit**y - Apply to large-scale operations or complex problems where traditional methods may be insufficient.
+
+:::
+
+
+## About this course
+
+* explore what is data is and why it matters;
+
+* discuss data collection, storage, analysis, and visualisation;
+
+* use of practical examples and real-world applications to harness the power of data to drive insights, solve problems, and make informed decisions
+
+
+::: {.notes}
+
+In this course, we will explore everything from the basics such as what data is and why it matters to more advanced topics like data collection, storage, analysis, and visualisation. Through practical examples and real-world applications, you’ll learn how to harness the power of data to drive insights, solve problems, and make informed decisions in fields ranging from business and technology to healthcare and beyond. By the end of this course, you’ll not only understand the importance of data but also be prepared to apply these concepts in your own work.
+
+:::
+
+## Objectives
+
+By the end of the course, participants are expected to be able to:
+
+1. Articulate the value of data driven decision making and programming;
+
+2. Critically assess a data by it source, format, structure, types, and classes;
+
+3. Critically evaluate the state of their own dataset based on stated best practices;
+
+::: {.notes}
+
+The overall objective of the course is to making a case for shifting to more data-driven decision-making processes.
+
+Specifically, by the end of the course, participants are expected to be able to:
+
+1. Articulate the value of data driven decision making and programming;
+
+2. Critically assess a data by it source, format, structure, types, and classes;
+
+3. Critically evaluate the state of their own dataset based on stated best practices;
+
+:::
+
+## Objectives
+
+4. Outline the strengths and weaknesses of various types of data tools;
+
+5. Demonstrate capacity to use spreadsheet software to clean, process, and structure data; and,
+
+6. Demonstrate capacity to use spreadsheet software to perform data analysis.
+
+::: {.notes}
+
+4. Outline the strengths and weaknesses of various types of data tools;
+
+5. Demonstrate capacity to use spreadsheet software to clean, process, and structure data; and,
+
+6. Demonstrate capacity to use spreadsheet software to perform data analysis.
+
+:::
+
+## Who, what, when, where, how, and why of data {.center}
+
+::: {.notes}
+
+When going through these five case studies, it is recommended to first go through them using the who, what, when, where, how, and why framework as a way to get a firm grounding on the case study details.
+
+The “who, what, when, where, how, and why” framework is a systematic approach to understanding and analysing data. Another term that can be used for this framework is descriptive metadata which is data that provides information about other data, but not the content itself. So, if I have an image, the metadata wouldn’t be the actual picture, but the details about who took it, when, or where.
+
+Here’s a structured explanation of each component within this framework:
+
+:::
+
+## Who
+
+* who owns the data;
+* who manages the data;
+* who collects the data;
+* who stores the data; and,
+* who protects/safeguards the data.
+
+::: {.notes}
+
+Refers to the individuals or entities involved with the data. This includes stakeholders, users, customers, employees, or business partners who interact with or are affected by the data. More specifically, this may include, among others, information on:
+
+who owns the data;
+who manages the data;
+who collects the data;
+who stores the data; and,
+who protects/safeguards the data.
+
+:::
+
+## What
+
+* what the data is about; 
+* type, nature, and provenance; 
+* specifies the information available, such as numerical data, text, images, etc.
+
+::: {.notes}
+
+Describes what the data is about and its type, nature, and provenance. It specifies what information is available, such as numerical data, text, images, etc., which helps in understanding the scope and relevance of the data, and how to work with the data.
+
+:::
+
+## When
+
+* timing;
+* period; and/or,
+* frequency
+
+
+::: {.notes}
+
+Pertains to the timing, period, and/or frequency in which the data was/is being collected, recorded, or analysed.
+
+:::
+
+## Where
+
+* location where the data is stored or accessed
+
+    * database;
+    * server;
+    * external sources
+
+::: {.notes}
+
+Indicates the location where the data is stored or accessed. This could be within a database, on a server, or even from external sources like devices or sensors, providing context about data accessibility and storage.
+
+:::
+
+## How
+
+Methods used to:
+
+* collect;
+* process;
+* extract
+
+
+::: {.notes}
+
+Focuses on the methods used to collect, process, or extract the data. This includes techniques such as surveys, sensor readings, or existing records, which helps in understanding how reliable and comprehensive the data is.
+
+:::
+
+## Why
+
+* purpose behind collecting and analysing the data;
+* guides appropriate actions based on the stated purpose
+
+::: {.notes}
+
+Asks for the purpose behind collecting and analysing the data. It clarifies why this information is being gathered i.e., whether it’s for reporting, decision-making, monitoring performance, or other objectives. This in turn guides appropriate actions based on the data insights.
+
+:::
+
+## Case studies {.center}
+
+::: {.notes}
+
+To achieve these objectives, the course employs the case-study method, an approach that involves in-depth examination of a specific individual, group, organisation, or event to understand a complex issue in its real-life context.
+
+For this course, the five case studies (one for each of the next five chapters) provide a more nuanced narrative of opportunities and challenges of adopting a data-driven approach to decision-making specifically in the context of governance within governments (rather than just in businesses).
+
+:::
+
+## Case Study 1: Data use and analytics in water quality management
+
+![](../../images/qrcode_case1.png){fig-align="center"}
+
+
+## Case Study 2:  Enhancing Local Governance Through Data-Driven Decision-Making in Indonesia
+
+![](../../images/qrcode_case2.png){fig-align="center"}
+
+
+## Case Study 3:  The Use of Data in Local Governance - A Michigan Perspective
+
+![](../../images/qrcode_case3.png){fig-align="center"}
+
+
+## Case Study 4: Enhancing Data-Driven Decision-Making in Local Governance - A Focus on Turkana County.
+
+![](../../images/qrcode_case4.png){fig-align="center"}
+
+
+## Case Study 5: Indigenous Data Governance in the United States
+
+![](../../images/qrcode_case5.png){fig-align="center"}
+
+## Exercise {.center}
+
+With the team members you have been grouped with, read through your team's assigned case study. Using the _who_, _what_, _when_, _where_, _how_, and _why_ framework, outlin
+e these components as with regards to your case study.

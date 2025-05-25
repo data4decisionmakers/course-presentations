@@ -1,0 +1,18 @@
+project:
+  title: "course-presentations"
+  output-dir: _slides
+
+format:
+  revealjs: 
+    slide-number: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    logo: images/d4dm.png
+    css: styles.css
+    footer: "[Data for Decision Makers](https://d4dm.org)"
+
+author:
+  name: Ernest Guevarra
+  email: ernest@d4dm.org
+  affiliation: University of Oxford
