@@ -260,5 +260,4 @@ For this course, the five case studies (one for each of the next five chapters) 
 
 ## Exercise {.center}
 
-With the team members you have been grouped with, read through your team's assigned case study. Using the _who_, _what_, _when_, _where_, _how_, and _why_ framework, outlin
-e these components as with regards to your case study.
+With the team members you have been grouped with, read through your team's assigned case study. Using the _who_, _what_, _when_, _where_, _how_, and _why_ framework, outline these components as with regards to your case study.
