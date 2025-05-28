@@ -137,3 +137,9 @@ Uses software to completely overwrite data on any storage device, making it more
 
 * Speed of recovery is critical to minimise impact.
 
+## Practical exercises on personal data security
+
+* All about passwords
+
+* Performing encryption
+
