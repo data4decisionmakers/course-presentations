@@ -57,7 +57,7 @@ title-slide-attributes:
 
 ## Storage limitation
 
-^ Personal data should only be kept in a form which permits identification of data subjects for as long as is necessary for the purposes for which the personal data are processed. 
+* Personal data should only be kept in a form which permits identification of data subjects for as long as is necessary for the purposes for which the personal data are processed. 
 
 * In order to ensure that the personal data are not kept longer than necessary, time limits should be established by the controller for erasure or for a periodic review.
 
@@ -91,6 +91,8 @@ title-slide-attributes:
 
 * Personal/individual layer - us as individuals responsible for the security of our own personal information and any other information that we own or are responsible for.
 
+## Layers of data security
+
 * Institutional layer
 
     * institutions responsible for the security of the personal information of its own employees and/or members/affiliates
@@ -99,7 +101,7 @@ title-slide-attributes:
 
 ## Question
 
-^ How do you secure your personal information and any other sensitive or private information that you own?
+* How do you secure your personal information and any other sensitive or private information that you own?
 
 * How does your institution (employer and/or organisation/association) secure the personal information of their employees/members and any other sensitive or private information that they own?
 
@@ -141,5 +143,15 @@ Uses software to completely overwrite data on any storage device, making it more
 
 * All about passwords
 
+* Using two-factor authentication (2FA)
+
 * Performing encryption
+
+## Exercise 1: password management {.center}
+
+Describe your password creation and password storage practices?
+
+## Exercise 2: spy games with encryption {.center}
+
+Performing encryption using Pretty Good Privacy (PGP) encryption
 
