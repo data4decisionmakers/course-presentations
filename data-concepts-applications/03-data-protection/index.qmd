@@ -1,0 +1,139 @@
+---
+title: "Data Privacy, Security, and Protection"
+subtitle: "Data-driven Decision-making"
+title-slide-attributes: 
+  data-background-color: "#002147"
+---
+
+## Outline
+
+* Data privacy and protection
+
+* Principles of data privacy and protection
+
+* Legal frameworks specific and relevant to data privacy and protection
+
+* Data security
+
+* Types of data security
+
+## Data privacy and protection {.center}
+
+**Data privacy** is the protection of personal information, ensuring individuals have control over how their data is collected, stored, and used. It encompasses the principles and practices that govern how sensitive data, especially personal data, is handled, including _collection_, _retention_, _deletion_, and _access_. 
+
+## Principles of data privacy and protection
+
+* The key principles of data protection ensure that personal data is handled responsibly and ethically. These principles are essential for protecting individuals' privacy and rights while also enabling organisations to use data effectively. 
+
+* The core principles are: _lawfulness, fairness, and transparency_; _purpose limitation_; _data minimisation_; _accuracy_; _storage limitation_; _integrity and confidentiality_; and _accountability_.
+
+## Lawfulness, Fairness, and Transparency
+
+* There should be a legal basis for collecting and using personal data (_lawfulness_)
+
+* Handling personal data in ways that people would reasonably expect, and not using it in ways that cause them unjustified harm (_fairness_)
+
+* Requires that any information and communication relating to the processing of personal data be easily accessible and easy to understand, and that clear and plain language be used (_transparency_)
+
+## Purpose limitation
+
+* Personal data should only be collected for _specified_, _explicit_, and _legitimate_ purposes and not further processed in a manner that is incompatible with those purposes.
+
+* specific purposes for which personal data are processed should be _explicit_ and _legitimate_ and determined at the time of the collection of the personal data.
+
+## Data minimisation
+
+* Processing of personal data must be adequate, relevant, and limited to what is necessary in relation to the purposes for which they are processed. 
+
+* Personal data should be processed only if the purpose of the processing could not reasonably be fulfilled by other means. 
+
+* This is linked to the principle of **Storage limitation**
+
+## Accuracy
+
+* Ensure that personal data are accurate and, where necessary, kept up to date; taking every reasonable step to ensure that personal data that are inaccurate, having regard to the purposes for which they are processed, are erased or rectified without delay. 
+
+* Accurately record information collected or receive and the source of that information.
+
+## Storage limitation
+
+^ Personal data should only be kept in a form which permits identification of data subjects for as long as is necessary for the purposes for which the personal data are processed. 
+
+* In order to ensure that the personal data are not kept longer than necessary, time limits should be established by the controller for erasure or for a periodic review.
+
+## Integrity and confidentiality
+
+* Protection against unauthorised or unlawful access to or use of personal data and the equipment used for the processing and against accidental loss, destruction or damage, using appropriate technical or organisational measures.
+
+## Accountability
+
+* Take responsibility for the processing of personal data and how they comply with the above principles
+
+* Demonstrate (through appropriate records and measures) compliance
+
+## Legal frameworks
+
+* General Data Protection Regulation - UK and EU
+
+* Data Protection Act, 2023 - Seychelles
+
+* These frameworks follow the same principles described earlier
+
+## Data security
+
+* The practice of protecting digital information from unauthorised access, use, disclosure, disruption, modification, or destruction.
+
+* Encompasses various measures and techniques to ensure the confidentiality, integrity, and availability of data throughout its lifecycle. 
+
+* Includes securing physical hardware, software, storage devices, and user devices, as well as implementing access controls, policies, and procedures.
+
+## Layers of data security
+
+* Personal/individual layer - us as individuals responsible for the security of our own personal information and any other information that we own or are responsible for.
+
+* Institutional layer
+
+    * institutions responsible for the security of the personal information of its own employees and/or members/affiliates
+    * institutions responsible for the security of the personal information of others from whom they collect information from as part of the service they render.
+    * institutions responsible for the security of other types of information that they own or are responsible for
+
+## Question
+
+^ How do you secure your personal information and any other sensitive or private information that you own?
+
+* How does your institution (employer and/or organisation/association) secure the personal information of their employees/members and any other sensitive or private information that they own?
+
+## Types of data security
+
+* Encryption
+
+* Data erasure
+
+* Data masking
+
+* Data resiliency
+
+## Encryption
+
+* Process of using an algorithm to transform normal text characters into an unreadable format
+
+* Uses encryption keys that scramble data so that only authorised users can read it. 
+
+* File and database encryption software serve as a final line of defense for sensitive information
+
+## Data erasure {.center}
+
+Uses software to completely overwrite data on any storage device, making it more secure than standard data wiping. It verifies that the data is unrecoverable.
+
+## Data masking
+
+* Replacing sensitive data with fictional yet realistic personally identifiable information (PII) where necessary so that development can occur in environments that are compliant.
+
+* By masking data, organisations can allow teams to develop applications or train people that use real data.
+
+## Data resiliency
+
+* Resiliency depends on how well an organisation endures or recovers from any type of failure that affect data availability. 
+
+* Speed of recovery is critical to minimise impact.
+
