@@ -1,0 +1,313 @@
+---
+title: "Data Tools"
+subtitle: "Data-driven Decision-making"
+title-slide-attributes: 
+  data-background-color: "#002147"
+lightbox: true
+fig-cap-location: top
+---
+
+## "The best tool is the one you have" {.center}
+
+## Data entry
+
+::: {layout="[[50,50], [50,50]]"}
+![Paper-based](../../images/paper_entry.jpg){height=2in}
+
+![Microsoft Excel](../../images/excel_logo.png){height=2in}
+
+![Google Sheets](../../images/sheets_logo.png){height=2in}
+
+![Google Forms](../../images/forms_logo.png){height=2in}
+:::
+
+## Data cleaning
+
+![Microsoft Excel](../../images/excel_logo.png)
+
+## Data storage
+
+::: {layout="[[33,33,33]]"}
+![Own laptop](../../images/own-laptop.jpg){height=3in}
+
+![External hard drive](../../images/external_hard_drive.jpg){height=3in}
+
+![Cloud services](../../images/cloud_services.jpg){height=3in}
+:::
+
+::: {.notes}
+Predominant tool for storage is the person's own hardware such as the individual's laptop or a provided external hard drive. Formal use of cloud services tend to be for those that have on cloud data systems while the informal use are for those that store on personal cloud-based drives (Google Drive, OneDrive, SharePoint)
+:::
+
+## Data analysis
+
+::: {layout="[[33,33,33]]"}
+![Microsoft Excel](../../images/excel_logo.png){height=3in}
+
+![Microsoft PowerBI](../../images/New_Power_BI_Logo.png){height=3in}
+
+![Google Sheets?](../../images/sheets_logo.png){height=3in}
+:::
+
+::: {.notes}
+These tools can perform limited data analysis with the most basic/common being data visualisation. Other types of higher level analysis such as statistical is very limited or modelling being none. PowerBI, however, has functionality to interface with programming languages such as Python and R.
+:::
+
+## Data platforms/systems
+
+::: {layout="[[50,50], [50]]"}
+![Microsoft Fabric](../../images/fabric_logo.png){height=3in}
+
+![ArcGIS Enterprise](../../images/ArcGIS-Enterprise.png){height=3in}
+
+![dhis2 and other similar information systems](../../images/dhis2.png){height=1in}
+:::
+
+::: {.notes}
+Data platforms or systems are able to perform all the functionalities for data entry/collection, data storage, and data analysis (albeit limited)
+:::
+
+## All roads point to Microsoft Excel
+
+:::: {.columns}
+
+::: {.column width="40%"}
+![](../../images/excel_logo.png)
+:::
+
+::: {.column width="60%"}
+
+Across all of the groups/individuals represented in this short course, regardless of the primitiveness or sophistication of the tools being used across the different data-orientated tasks, **all use Microsoft Excel** (or similar spreadsheet tool such as Google Sheets) in one way or the other for all of their data tasks.
+:::
+
+::::
+
+## Data pathway {.center}
+
+```{mermaid}
+flowchart LR
+  A[Data collection] --> C[Data processing]
+  B[Data extraction] --> C[Data processing]
+  C[Data processing] --> D[Exploratory data analysis]
+  D[Exploratory data analysis] --> E[Modelling]
+  C[Data processing] --> F[Data cleaning] 
+  D[Exploratory data analysis] --> F[Data cleaning]
+```
+
+## Data tools 
+
+* Our choice of tools or the tools that we are made to use dictate how we implement the different steps in the data management pathway as such also influence the resulting quality of data that we obtain
+
+* Since every step of the data pathway used by the course participants involve Microsoft Excel, this tool has the greatest influence in the data quality of the current ecosystem of data in Seychelles
+
+## The dangers of spreadsheets
+
+* The danger is real. The [European Spreadsheet Risks Interest Group](https://eusprig.org/) keeps a public archive of spreadsheet [“horror stories”](https://eusprig.org/research-info/horror-stories/){target="_blank"}.
+
+* Many researchers have examined error rates in spreadsheets. In 13 audits of real-world spreadsheets, an average of 88% contained errors.
+
+* Microsoft Excel specifically converts some combination of character and numbers to dates and stores dates differently between operating systems, which can cause problems in downstream analyses.
+
+## The dangers of spreadsheets
+
+* Spreadsheets are often used as a multi-purpose tool for data entry, storage, analysis, and visualisation.
+
+* Spreadsheets, by design, make humans format data to be viewed by the human eye rather than to be readable by a machine.
+
+## Spreadsheets are best suited to data entry and storage {.center}
+
+## Specific recommendations for organising spreadsheet data in a way that both humans and computer programs can read {.center}
+
+## Be consistent
+
+* Use consistent codes for categorical variables
+
+* Use a consistent fixed code for missing values
+
+* Use consistent variable names
+
+* Use consistent identifiers
+
+* Use consistent layout in multiple data files
+
+## Be consistent
+
+* Use consistent file names
+
+* Use consistent format for dates (ideally ISO format - YYYY-MM-DD)
+
+* Use consistent phrases
+
+* Be careful about extra spaces in cells
+
+
+## Choose good names for things
+
+* Do not use spaces in variables names and file anmes
+
+* Avoid special characters
+
+* Short but meaningful
+
+## Write dates as YYYY-MM-DD
+
+* recommend using the global “ISO 8601” standard, YYYY-MM-DD
+
+* Microsoft Excel’s treatment of dates can cause problems in data. It stores them internally as a number, with different conventions on Windows and Macs. So, you may need to manually check the integrity of your data when they come out of Excel.
+
+## No empty cell {.center}
+
+## Put just one thing in a cell {.center}
+
+## Make it a rectangle {.center}
+
+## Create a data dictionary {.center}
+
+## No calculations in the raw data file {.center}
+
+## Do not use font colour or highlighting as data {.center}
+
+## Make backups {.center}
+
+## Use data validation to avoid errors {.center}
+
+We discuss validity errors specifically later in this slide deck.
+
+## Save the data in plain text files {.center}
+
+## Other formatting issues with Excel can be found [here](https://datacarpentry.github.io/spreadsheet-ecology-lesson/02-common-mistakes){target="_blank"}
+
+## We need to talk about data cleaning {.center}
+
+**Data cleansing** or **data cleaning** is the process of identifying and correcting (or removing) corrupt, inaccurate, or irrelevant records from a dataset, table, or database. It involves detecting incomplete, incorrect, or inaccurate parts of the data and then replacing, modifying, or deleting the affected data.
+
+## But how do we know that our data has errors?
+
+* It depends on the data and it depends on what kind of error you are looking for
+
+* Most of the time, when we say we are performing data cleaning, we are looking for or spotting **errors of validity**
+
+* Validity in terms of data is the degree to which the values conform to defined rules or constraints. In general such errors can be spotted "by eye"
+
+## Validity errors
+
+* Data type errors - values in a particular column must be of a particular data type
+
+* Range errors - numbers or dates should fall within a certain range
+
+* Missing values errors - missing values particularly when a value is required
+
+* Unique value errors
+
+## Validity errors
+
+* Set membership errors - values should only be from a specific set of possible values
+
+* Expected value errors
+
+* Cross-field validation - the value in one field determines what is correct or incorrect value in another field (example: pregnant male)
+
+## Validity errors often due to data entry errors/issues {.center}
+
+## But not all errors can be detected "by eye"
+
+* Some _validity errors_ and errors of _accuracy_, _consistency_, _uniformity_, and _distribution_ requires exploratory data analysis to be detected.
+
+* We will discuss these errors next week omn our topic on exploratory data analysis.
+
+## Exercise: spot the Excel errors {.center}
+
+## We need to talk about data re-structuring
+
+* **Data restructuring** refers to manipulating existing data to make it more suitable for analysis, storage, or other purposes. It involves changing the format, structure, or organisation of data to align with specific needs, such as data warehousing or statistical analysis.
+
+* This is another type of data cleaning and is sometimes called **"data tidying"**
+
+## Data structure - Example 1
+
+The table has two columns and three rows, and both rows and columns are labelled.
+
+&nbsp;       | treatmenta | treatmentb
+------------:|-----------:|----------:
+John Smith   | &nbsp;     | 2
+Jane Doe     | 16         | 11
+Mary Johnson | 3          | 1
+
+## Data structure - Example 2
+
+Rows and columns have been transposed. The data is the same, but the layout is different.
+
+&nbsp;       | John Smith  | Jane Doe  | Mary Johnson
+------------:|------------:|----------:|------------:
+treatmenta   | &nbsp;      | 16        | 3
+treatmentb   | 2           | 11        | 1
+
+## Data semantics
+
+* A dataset is a collection of **values**, usually either numbers (if quantitative) or strings (if qualitative). 
+
+* **Values** are organised in two ways: 
+
+    * Every _value_ belongs to a **variable** and an **observation**. 
+    * A **variable** contains all values that measure the same underlying attribute (like height, temperature, duration) across units. 
+    * An **observation** contains all values measured on the same unit (like a person, or a day, or a race) across attributes.
+
+## Data structure - Example 3
+
+name         | treatment | result
+-----------: | :-------- | -----:
+John Smith   | a         |  
+Jane Doe     | a         | 16
+Mary Johnson | a         | 3
+John Smith   | b         | 2
+Jane Doe     | b         | 11
+Mary Johnson | b         | 1
+
+* The same data as earlier but with variables in columns and observations in rows.
+
+## Data structure - summary
+
+* For a given dataset, it’s usually easy to figure out what are **observations** and what are **variables**, but it is surprisingly difficult to precisely define variables and observations in general.
+
+* A general rule of thumb is that it is easier to describe **functional relationships** between variables than between observations (rows), and it is easier to make **comparisons** between groups of observations than between groups of columns.
+
+## The standard of tidy data
+
+* Provides a standard way to organise data values within a dataset.
+
+* Designed to facilitate initial exploration and analysis of the data, and to simplify the development of data analysis tools.
+
+* Principles of tidy data are closely tied to those of relational databases
+
+## Tidy data definition
+
+* Tidy data is a standard way of mapping the meaning of a dataset to its structure.
+
+* A dataset is messy or tidy depending on how rows, columns and tables are matched up with observations, variables and types.
+
+## Tidy data criteria
+
+1. Each variable forms a column.
+
+2. Each observation forms a row.
+
+3. Each type of observational unit forms a table.
+
+## Five most common problems with messy datasets
+
+* Column headers are values not variable names
+
+* Multiple variables are stored in one column
+
+* Variables are stored in both rows and columns
+
+* Multiple types of observational units are stored in the same table.
+
+* A single observational unit is stored in multiple tables.
+
+## Tidy data is extremely compatible with relational databases and data collection tools that adhere to relational database standards
+
+## Messy data is commonly a result of the use of data tools that do not have standards or set rules for data structure i.e., Microsoft Excel
+
+
+
