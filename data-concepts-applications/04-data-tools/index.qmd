@@ -215,7 +215,7 @@ We discuss validity errors specifically later in this slide deck.
 
 * We will discuss these errors next week omn our topic on exploratory data analysis.
 
-## Exercise: spot the Excel errors {.center}
+## Exercise: Build a data entry system that will spot the errors in data for a school nutrition monitoring programme {.center}
 
 ## We need to talk about data re-structuring
 
@@ -305,9 +305,9 @@ Mary Johnson | b         | 1
 
 * A single observational unit is stored in multiple tables.
 
-## Tidy data is extremely compatible with relational databases and data collection tools that adhere to relational database standards
+## Tidy data is extremely compatible with relational databases and data collection tools that adhere to relational database standards {.center}
 
-## Messy data is commonly a result of the use of data tools that do not have standards or set rules for data structure i.e., Microsoft Excel
+## Messy data is commonly a result of the use of data tools that do not have standards or set rules for data structure i.e., Microsoft Excel {.center}
 
 
 
