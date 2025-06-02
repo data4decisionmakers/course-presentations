@@ -1,0 +1,67 @@
+---
+title: "Introduction to Exploratory Data Analysis"
+subtitle: "Data-driven Decision-making"
+title-slide-attributes: 
+  data-background-color: "#002147"
+lightbox: true
+fig-cap-location: top
+---
+
+## Outline
+
+1. Definitions
+
+2. Origins
+
+## Definitions - Wikipedia {.center}
+
+> In statistics, exploratory data analysis (EDA) is an approach to analyzing data sets to summarize their main characteristics, often with visual methods. A statistical model can be used or not, but primarily EDA is for seeing what the data can tell us beyond the formal modeling or hypothesis testing task.
+
+## Definition - Wickham and Grolemund {.center}
+
+> EDA is not a formal process with a strict set of rules. More than anything, EDA is a state of mind. During the initial phases of EDA you should feel free to investigate every idea that occurs to you. Some of these ideas will pan out, and some will be dead ends.
+
+## Definition - SAS {.center}
+
+> EDA is necessary for the next stage of data research. If there was an analogy to exploratory data analysis, it would be that of a painter examining their tools and available time, before deciding on what best to paint.
+
+## Origins
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+![](../../images/tukey_cover.png)
+
+:::
+
+::: {.column width="50%"}
+
+* The field of EDA got into the forefront with the publication of [Tukey's Exploratory Data Analysis](https://books.google.sc/books/about/Exploratory_Data_Analysis.html?id=UT9dAAAAIAAJ&redir_esc=y)
+
+* All of Tukey's techniques in EDA can be done by hand with pencil and paper.
+
+* Aim was to provide individual and isolated techniques useful to data analysts. 
+
+:::
+
+::::
+
+## On measures {.center}
+
+It is important to understand what you **CAN DO** before you learn to measure how **WELL you seem to have DONE it**.
+
+## On pictures {.center}
+
+**The greatest value of a picture** is when it forces us to notice **what we never expected to see**.
+
+## On exploration {.center}
+
+Once upon a time, statisticians only explored.
+
+## On not having one right answer {.center}
+
+There can be many ways to approach a body of data. Not all are equally good.
+
+## Are you ready to explore? {.center}
+
