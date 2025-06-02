@@ -71,11 +71,26 @@ File organisation and naming are powerful weapons against chaos.
 
 ## Three principles for file names
 
+:::: {.columns}
+
+::: {.column width="70%"}
+
+![](../../images/file_organisation.png)
+
+:::
+
+::: {.column width="30%"}
+
 * machine-readable
 
 * human-readable
 
 * plays well with default ordering
+
+:::
+
+::::
+
 
 ## Machine-readable
 
@@ -116,7 +131,7 @@ Easy to figure out what something is based on its name
 
 ## Exercise {.center}
 
-Using a template spreadsheet for data entry and a template spreadsheet containing data based on the data entry format, organise these files based on what we have discussed.
+Using the provided template spreadsheet for data entry and a template spreadsheet containing data based on the data entry format, create an project-based structure for these files and organise them based on what we have discussed.
 
 
 
