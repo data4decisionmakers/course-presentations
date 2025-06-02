@@ -6,7 +6,10 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="index_files/libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="index_files/libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="index_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.7.31">
 
   <meta name="author" content="Ernest Guevarra">
@@ -226,11 +229,16 @@ Ernest Guevarra
 </section>
 <section id="three-principles-for-file-names" class="slide level2">
 <h2>Three principles for file names</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<p><a href="../../images/file_organisation.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="../../images/file_organisation.png"></a></p>
+</div><div class="column" style="width:30%;">
 <ul>
 <li><p>machine-readable</p></li>
 <li><p>human-readable</p></li>
 <li><p>plays well with default ordering</p></li>
 </ul>
+</div></div>
 </section>
 <section id="machine-readable" class="slide level2">
 <h2>Machine-readable</h2>
@@ -278,7 +286,7 @@ Ernest Guevarra
 </section>
 <section id="exercise" class="slide level2 center">
 <h2>Exercise</h2>
-<p>Using a template spreadsheet for data entry and a template spreadsheet containing data based on the data entry format, organise these files based on what we have discussed.</p>
+<p>Using the provided template spreadsheet for data entry and a template spreadsheet containing data based on the data entry format, create an project-based structure for these files and organise them based on what we have discussed.</p>
 
 </section>
     </div>
@@ -666,6 +674,38 @@ Ernest Guevarra
         }
       });
       </script>
+    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
+        }
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
+              }
+            }
+          } 
+        });
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
+          }
+        });
+      
+      };
+      
+    })();
+              </script>
     
 
 </body></html>
