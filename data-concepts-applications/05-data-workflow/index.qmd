@@ -96,9 +96,9 @@ File organisation and naming are powerful weapons against chaos.
 
 * avoid spaces, punctuation, accented, characters, case sensitivity.
 
-* deliberate use of delimiters/space-holders - "_" or "-"
+* deliberate use of delimiters/space-holders - `"_"` or `"-"`
 
-     * general rule is that "_" to delimit units of metadata while "-" to delimit words so that they are more readable.
+     * general rule is that `"_"` to delimit units of metadata while `"-"` to delimit words so that they are more readable.
 
 ## Machine-readable
 
@@ -128,6 +128,8 @@ Easy to figure out what something is based on its name
 * easy to implement now
 
 * payoffs accumulate as your skills evolve and projects get more complex
+
+## 
 
 ## Exercise {.center}
 
