@@ -1,0 +1,130 @@
+---
+title: "Project-based data workflow"
+subtitle: "Data-driven Decision-making"
+title-slide-attributes: 
+  data-background-color: "#002147"
+lightbox: true
+fig-cap-location: top
+---
+
+## Outline
+
+1. Mindset
+
+2. Livestock not pets
+
+3. Project-oriented workflow
+
+
+## Mindset {.center}
+
+As our skills as data analysts grow, the surrounding systems and infrastructure become crucial for ensuring the reproducibility and long-term preservation of our work. However, we often lack formal training or mentorship in managing such systems, leading us to either get lost amidst this technology or that we begin to explore these possibilities ourselves.
+
+## Mindset {.center}
+
+With this short course in general and this second week specifically, we hope to help you gracefully fall into this gap.
+
+Don’t fret over past mistakes, but raise the bar for new work. Small but meaningful incremental changes add up over time, transforming your **data quality of life**.
+
+## Livestock not pets {.center}
+
+Think of your data processes as livestock and not pets.
+
+::: {.notes}
+
+Livestock is managed in herds and there is little fuss when individuals are lost or must be sacrificed. A pet, on the other hand, is unique and precious.
+
+This is one of the limitations of spreadsheets in relation to creating a holistic data workflow. The tool combines the data, the code/steps, and the interface all in one software with an emphasis on just showing the end product/output to the user and the code/steps component hidden away. 
+
+:::
+
+## Spreadsheets: save a source for your written functions
+
+* Use a text editor (rather than a word processor)
+
+     * For Windows: Notepad++ - https://notepad-plus-plus.org/
+     * For Mac: CodeEdit - https://www.codeedit.app/
+
+* Create a text file to associate with every spreadsheet project that you are working on.
+
+* Save the text file within the same directory as the associated spreadsheet.
+
+::: {.notes}
+
+We will discuss the possible file organisation for this in a later slide
+
+:::
+
+## Project-oriented workflow {.center}
+
+Organise work into projects.
+
+## File system discipline
+
+* Put all the files related to a single project in a designated folder.
+* This applies to data, code, figures, notes, etc.
+* Depending on project complexity, you might enforce further organization into subfolders.
+
+## File naming {.center}
+
+File organisation and naming are powerful weapons against chaos.
+
+## Three principles for file names
+
+* machine-readable
+
+* human-readable
+
+* plays well with default ordering
+
+## Machine-readable
+
+* avoid spaces, punctuation, accented, characters, case sensitivity.
+
+* deliberate use of delimiters/space-holders - "_" or "-"
+
+     * general rule is that "_" to delimit units of metadata while "-" to delimit words so that they are more readable.
+
+## Machine-readable
+
+* easy to search for files later
+* easy to narrow file lists based on names
+* easy to extract information from file names
+
+## Human-readable
+
+* name contains info on content.
+* use the concept of a **slug** used in URLs.
+
+## Human-readable {.cemter}
+
+Easy to figure out what something is based on its name
+
+## Plays well with default ordering
+
+* put something numeric first
+
+* use ISO 8601 standard for dates
+
+* add leading zeros to numbers
+
+## Three principles for file names
+
+* easy to implement now
+
+* payoffs accumulate as your skills evolve and projects get more complex
+
+## Exercise {.center}
+
+Using a template spreadsheet for data entry and a template spreadsheet containing data based on the data entry format, organise these files based on what we have discussed.
+
+
+
+
+
+
+
+
+
+
+
