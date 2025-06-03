@@ -22,9 +22,9 @@ As our skills as data analysts grow, the surrounding systems and infrastructure 
 
 ## Mindset {.center}
 
-With this short course in general and this second week specifically, we hope to help you gracefully fall into this gap.
+* With this short course in general and this second week specifically, we hope to help you gracefully fall into this gap.
 
-Don’t fret over past mistakes, but raise the bar for new work. Small but meaningful incremental changes add up over time, transforming your **data quality of life**.
+* Don’t fret over past mistakes, but raise the bar for new work. Small but meaningful incremental changes add up over time, transforming your **data quality of life**.
 
 ## Livestock not pets {.center}
 
@@ -111,7 +111,7 @@ File organisation and naming are powerful weapons against chaos.
 * name contains info on content.
 * use the concept of a **slug** used in URLs.
 
-## Human-readable {.cemter}
+## Human-readable {.center}
 
 Easy to figure out what something is based on its name
 
@@ -129,19 +129,7 @@ Easy to figure out what something is based on its name
 
 * payoffs accumulate as your skills evolve and projects get more complex
 
-## 
-
 ## Exercise {.center}
 
 Using the provided template spreadsheet for data entry and a template spreadsheet containing data based on the data entry format, create an project-based structure for these files and organise them based on what we have discussed.
-
-
-
-
-
-
-
-
-
-
 
