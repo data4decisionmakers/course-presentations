@@ -5,5 +5,330 @@ title-slide-attributes:
   data-background-color: "#002147"
 lightbox: true
 fig-cap-location: top
+engine: knitr
 ---
+
+## Outline
+
+1. Continuous data/variable
+
+     1.1 Numerical features
+     1.2 Other features that should be checked
+
+2. Categorical data/variable
+
+     2.1 Nominal
+     2.2 Ordinal
+
+## Continuous data/variable
+
+* Continuous data/variable is data that can take any numerical value. 
+
+* Height, weight, temperature and length are all examples of continuous data.
+
+## Numerical features of continuous data/variable
+
+* Measure of **central tendency**
+
+* Measure of **dispersion** (or variability/spread)
+
+* Measure of **skewness** and **kurtosis**
+
+## Other related features of continuous data/variable
+
+* **Distribution** of continuous data/variable - can be _symmetric_ or _asymmetric_ or _multimodal_
+
+* **Outliers** - some values that are far from the rest
+
+* **Heaping** - some values occur unexpectedly often
+
+* **Digit preference** - only certain values are found as there is a preference to round off to a specific value
+
+* **Implausible** - values outside of plausible or likely range
+
+## Measure of central tendency
+
+* In statistics, measure of central tendency is a central or typical value for a probability distribution.
+
+* Most common are **mean**, **median**, **mode** but there are many other measures of central tendency
+
+* Not all measures of central tendency are **robust**
+
+## Measure of central tendency - mean
+
+$$ \text{mean/average} ~ = ~ \frac{\sum{\text{values}}}{n_\text{values}} $$
+
+* **Mean** is a **non-robust** measure of location because it is susceptible/sensitive to a few extreme values in the data
+
+::: {.notes}
+
+**Mean**, or what some of us would call _average_, is the sum of all the values divided by the total number of values
+
+:::
+
+## Measure of central tendency - mean
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+![](../../images/student_scores_01.png)
+
+:::
+
+
+::: {.column width="70%"}
+
+* Consider this data of test scores of ten students.
+
+* 8 out of the 10 students did really well with scores 75 and higher but two students got really low scores.
+
+* Calculating the mean score across the 10 students:
+
+```Excel
+=AVERAGE(B2:B11)
+```
+
+```{r}
+scores <- c(10, 15, 80, 90, 75, 85, 92, 90, 90, 90) 
+```
+
+we get **`r mean(scores)`**
+
+:::
+
+::::
+
+## Measure of central tendency - median
+
+* **Median** is the 50th quantile of the observations
+
+* Median is a robust measure of central tendency because it is less influenced by extreme values.
+
+* Calculating the median of the scores in the previous example:
+
+```Excel
+=MEDIAN(B2:B11)
+```
+
+we get **`r median(scores)`**
+
+
+## Measure of central tendency - mean vs median
+
+* The mean and the median can be very different from each other
+
+* If `median > mean`, this would indicate that the continuous variable has some extremely low values
+
+* If `median < mean`, this would indicate that the continuous variable has some extremely high values
+
+* We should be using `median` instead of `mean` when performing summary measures for continuous variables
+
+## Exercise {.center}
+
+Using the student nutrition data in our exercises project, add median of age, weight, and height to the summary tables and compare with the mean values we got yesterday.
+
+## Measure of dispersion
+
+* describes the extent to which values of a continuous variable are spread out or scattered. 
+
+* provides information about the data's variability or "spread" around a central value. 
+
+* common measures of dispersion include _variance_, _standard deviation_, and _interquartile range (IQR)_.
+
+## Measure of dispersion - standard deviation and variance
+
+* most popular choice for measure of dispersion but are **not robust** to extreme values or outliers
+
+<!-- $$ \text{standard deviation} ~ = ~ \sqrt{{\sum_{i = 1} ^ n} \frac{(x_i - \bar{x}) ^ 2}{n - 1}} $$ -->
+
+* in Excel, you can calculate standard deviation using the `=STDEV()` function as follows (using the student scores example)
+
+```Excel
+=STDEV(B2:B11)
+```
+
+which gives **`r sd(scores)`**
+
+## Measure of dispersion - interquartile range (IQR)
+
+* IQR is the difference between 1st and 3rd quartile of the values of the continuous variable and is a more **robust** measure of spread.
+
+* Excel doesn't have a function to calculate IQR but it can be calculated as follows (using the student scores example):
+
+```Excel
+=QUARTILE(B2:B11,3)-QUARTILE(B2:B11,1)
+```
+
+which gives **`r IQR(scores)`**
+
+::: {.notes} 
+
+The difference in the standard deviation and the IQR indicates how much the standard deviation is influenced by the two extremely low scores
+
+:::
+
+## Boxplots
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+![](../../images/boxplot_muac.png)
+
+:::
+
+::: {.column width="60%"}
+
+Boxplots or box-and-whisker plots are based on the following reduced summary of the data.
+
+* **Median**
+* **Hinges**: interquartile range
+* **Inner fences:** the observation that is the most extreme, but within 1.5 x the length of the difference between the hinges.
+* **Outer fences**: twice that of the inner fence.
+
+:::
+
+::::
+
+## Exercise
+
+* Plot box-and-whisker plot for the weight of the students by sex
+
+* Plot box-and-whisker plot for the weight of the students by school
+
+* Plot box-and-whisker plot for the weight of the students by region
+
+## Histograms
+
+* graphical representation of the distribution of numerical data. 
+
+* It uses adjacent bars to show the frequency or count of data points within specified ranges, known as bins.
+
+* Histograms provide insights into the data distribution, such as whether it is normally distributed (bell-shaped), skewed, or has multiple peaks (multimodal).
+
+* They help identify patterns like clusters, gaps, and outliers in the data.
+
+## Exercise
+
+* Plot histogram for the height of the students by sex
+
+* Plot histogram for the height of the students by school
+
+* Plot histogram for the height of the students by region
+
+## Quantile-quantile plot
+
+* tests whether a continuous variable follows a particular theoretical distribution
+
+* usually, we test whether our data is normally distributed, that is `mean = 0` and `standard deviation = 1`
+
+
+## Quantile-Quantile plot - Step 1
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+![](../../images/qqplot_01.png)
+
+:::
+
+::: {.column width="60%"}
+
+Sort/order the continuous variable in ascending order (lowest to highest) and give each row of the data a rank starting at 1.
+
+```Excel
+=SORT(B2:B11)
+```
+
+:::
+
+::::
+
+## Quantile-Quantile plot - Step 2
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![](../../images/qqplot_03.png)
+
+:::
+
+::: {.column width="50%"}
+
+Calculate the actual cumulative probability by substracting `0.5` from the rank and then divided by the total number of observations.
+
+```Excel
+=(C2 - 0.5)/10
+```
+:::
+
+::::
+
+## Quantile-Quantile plot - Step 3
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+![](../../images/qqplot_05.png)
+
+:::
+
+::: {.column width="40%"}
+
+Calculate the theoretical cumulative probability using the `NORM.DIST()` function in Excel.
+
+```Excel
+=NORM.DIST(D2:D11,0,1,TRUE)
+```
+:::
+
+::::
+
+## Quantile-Quantile plot - Step 4
+
+* Calculate parameters for the QQ line.
+
+* Calculate the 25th and 75th quantile of the continuous data.
+
+```Excel
+=QUARTILE(B2:B11,1)    ## 25th quantile
+=QUARTILE(B2:B11,3)    ## 75th quantile
+```
+
+* Calculate the theoretical 25th and 75th quantile.
+
+```Excel
+=NORM.DIST(0.25,0,1,TRUE)    ## 25th quantile
+=NORM.DIST(0.75,0,1,TRUE)    ## 75th quantile
+```
+
+## Quantile-Quantile plot - Step 4
+
+* Calculate the slope and intercept of the QQ line
+
+$$ \text{slope} ~ = ~ \frac{q3_{obs} - q1_{obs}}{q3_{theo} - q1_{theo}} $$
+$$ \text{intercept} ~ = ~ q1_{obs} - slope \times q1_{theo} $$
+
+
+## Quantile-Quantile plot - Step 5 {.center}
+
+Create the plot.
+
+
+## Digit preference
+
+* Digit preference is the observation that the final number in a measurement occurs with a greater frequency than is expected by chance. 
+
+* This can occur because of rounding, the practice of increasing or decreasing the value in a measurement to the nearest whole or half unit, or because data are made up.
+
+
+## Digit preference - testing
+
+* Extract the last digit of a continuous variable. You can do this in Excel using the `RIGHT()` function.
+
+* Using pivot tables, create a summary table of the counts per last digit.
 
