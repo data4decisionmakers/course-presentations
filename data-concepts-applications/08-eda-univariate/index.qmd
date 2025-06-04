@@ -391,3 +391,13 @@ from 12 to < 20 | Acceptable
 * The `CHISQ.TEST()` function returns the p-value of the chi-square test.
 
 * If **p-value is less than 0.05**, then we can say that the difference between the actual and expected is not by chance alone and that there is most likely age heaping in the data.
+
+## Categorical amd nominal variables
+
+* The ordering of categorical and nominal variables should be done meaningfully with the intended message in mind.
+
+* If there is a natural ordering to the categorical variable, use this grouping when reporting on summary tables and in plots.
+
+* If there is no natural ordering, arrange the categories based on the values (either in ascending or descending order as appropriate)
+
+

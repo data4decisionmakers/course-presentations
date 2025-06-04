@@ -1,0 +1,74 @@
+---
+title: "Exploratory Data Analysis - Bivariate Statistics"
+subtitle: "Data-driven Decision-making"
+title-slide-attributes: 
+  data-background-color: "#002147"
+lightbox: true
+fig-cap-location: top
+engine: knitr
+---
+
+## On scatter plots{.center}
+
+> Scatter plots are glorious. Of all the major chart types, they are by far the most powerful. They allow us to quickly understand relationships] that would be nearly impossible to recognize in a table or a different type of chart. … Michael Friendly and Daniel Denis, psychologists and historians of graphics, call the scatter plot the most “generally useful invention in the history of statistical graphics.”    
+
+[Dan Kopf](https://qz.com/1235712/the-origins-of-the-scatter-plot-data-visualizations-greatest-invention)
+
+
+## Exercise {.center}
+
+We will use the `cyclones` dataset for learning and creating scatter plots.
+
+
+## Using scatter plots to identify outliers
+
+* identifying outliers by eye
+
+* identifying outliers based on statistical distance
+
+
+## Mahalanobis distance
+
+
+
+## Numerical measures of association
+
+* Correlation - Spearman's rank correlation (Spearman's rho)
+
+* Correlation - Kendall's tau correlaetion
+
+
+## Spearman's Rank Correlation
+
+* Get the rank of each of the two variables you are comparing. This can be done in Excel using the `RANK.AVG()` function
+
+```Excel
+=RANK.AVG(VALUE,ARRAY)
+```
+
+* Calculate the Spearman's coefficient
+
+$$ \rho ~ = ~ 1 - \frac{6 \sum d ^ 2}{n(n ^ 2 -1)} $$
+
+* This can be calculated manually or we can use the `
+
+
+## Spearman's Rank Correlation - interpretation
+
+* Perfect positive correlation = +1
+* Perfect negative correlation = -1
+* No correlation = 0
+* Weak correlation = +/- 0.1 to +/- 0.3
+* Moderate correlation = +/- 0.4 to +/- 0.6
+* Strong correlation = +/- 0.7 to +/- 0.9
+
+## Kendall's Rank Correlation
+
+* Get the rank of each of the two variables you are comparing. This can be done in Excel using the `RANK.AVG()` function
+
+* Sort the 
+
+* Determine concordant and discordant pairs
+
+     * Concordant - rank in second variable is greater than the rank for first variable
+
