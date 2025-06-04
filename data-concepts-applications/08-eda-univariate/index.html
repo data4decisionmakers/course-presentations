@@ -221,9 +221,11 @@ Ernest Guevarra
 <h2>Outline</h2>
 <ol type="1">
 <li><p>Continuous data/variable</p>
-<p>1.1 Numerical features 1.2 Other features that should be checked</p></li>
+<p>1.1 Numerical features<br>
+1.2 Other features that should be checked</p></li>
 <li><p>Categorical data/variable</p>
-<p>2.1 Nominal 2.2 Ordinal</p></li>
+<p>2.1 Nominal<br>
+2.2 Ordinal</p></li>
 </ol>
 </section>
 <section id="continuous-datavariable" class="slide level2">
@@ -432,8 +434,9 @@ Ernest Guevarra
 <div class="column" style="width:60%;">
 <p><a href="../../images/qqplot_05.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img data-src="../../images/qqplot_05.png"></a></p>
 </div><div class="column" style="width:40%;">
-<p>Calculate the theoretical cumulative probability using the <code>NORM.DIST()</code> function in Excel.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a href=""></a>=NORM.DIST(D2:D11,0,1,TRUE)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Calculate the theoretical cumulative probability using the <code>NORM.S.INV()</code> function in Excel.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a href=""></a>=NORM.S.INV(D2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Drag or copy this function down to the rest of the column.</p>
 </div></div>
 </section>
 <section id="quantile-quantile-plot---step-4" class="slide level2">
@@ -447,8 +450,8 @@ Ernest Guevarra
 <ul>
 <li>Calculate the theoretical 25th and 75th quantile.</li>
 </ul>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a href=""></a>=NORM.DIST(0.25,0,1,TRUE)    ## 25th quantile</span>
-<span id="cb9-2"><a href=""></a>=NORM.DIST(0.75,0,1,TRUE)    ## 75th quantile</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a href=""></a>=NORM.INV(0.25,0,1)    ## 25th quantile</span>
+<span id="cb9-2"><a href=""></a>=NORM.INV(0.75,0,1)    ## 75th quantile</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="quantile-quantile-plot---step-4-1" class="slide level2">
 <h2>Quantile-Quantile plot - Step 4</h2>
@@ -473,6 +476,82 @@ Ernest Guevarra
 <ul>
 <li><p>Extract the last digit of a continuous variable. You can do this in Excel using the <code>RIGHT()</code> function.</p></li>
 <li><p>Using pivot tables, create a summary table of the counts per last digit.</p></li>
+<li><p>Calculate the theoretical/expected number of counts per last digit if there was no digit preference</p></li>
+</ul>
+<p><span class="math display">\[ \text{Total number of records / 10} \]</span></p>
+</section>
+<section id="digit-preference---testing-1" class="slide level2">
+<h2>Digit preference - testing</h2>
+<ul>
+<li>Calculate the chi-square test statistic</li>
+</ul>
+<p><span class="math display">\[ \chi ^ 2 ~ = ~ \sum \frac{(O_i - E_i) ^ 2}{E_i} \]</span></p>
+<ul>
+<li>Calculate the digit preference score</li>
+</ul>
+<p><span class="math display">\[ DPS ~ = ~ \sqrt{\frac{\chi^2}{\sum O_i \times (n_{digits} - 1)}} \]</span></p>
+</section>
+<section id="digit-preference-score" class="slide level2">
+<h2>Digit preference score</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>DPS</strong></th>
+<th style="text-align: left;"><strong>Classification</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">&lt; 8</td>
+<td style="text-align: left;">Excellent</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">from 8 to &lt; 12</td>
+<td style="text-align: left;">Good</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">from 12 to &lt; 20</td>
+<td style="text-align: left;">Acceptable</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">20 or higher</td>
+<td style="text-align: left;">Problematic</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="age-heaping" class="slide level2">
+<h2>Age heaping</h2>
+<ul>
+<li><p>tendency to report children’s ages to the nearest year or adults’ ages to the nearest multiple of five or ten years.</p></li>
+<li><p>age heaping is very common that is why most reported national statistics use broad age groups</p></li>
+</ul>
+</section>
+<section id="age-heaping---testing" class="slide level2">
+<h2>Age heaping - testing</h2>
+<ul>
+<li><p>Select an appropriate divisor for your age data (6 or 12 if age is reported in months, 5 or 10 if age is reported in years)</p></li>
+<li><p>apply the <code>modulo</code> operator to divide the ages by the selected divisor. In Excel, there is the function <code>MOD()</code></p></li>
+</ul>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb10-1"><a href=""></a>=MOD(AGE,DIVISOR)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>The modulo operator returns the remainder value of the result of the division performed</li>
+</ul>
+</section>
+<section id="age-heaping---testing-1" class="slide level2">
+<h2>Age heaping - testing</h2>
+<ul>
+<li><p>Using pivot tables, create a summary table of the counts per remainder values.</p></li>
+<li><p>Calculate the theoretical/expected number of counts per remainder if there was no age heaping</p></li>
+<li><p>Perform a chi-square test on the observed and expected values to see if there is a significant difference between the values. In Excel, use the <code>CHISQ.TEST()</code> function</p></li>
+</ul>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb11-1"><a href=""></a>=CHISQ.TEST(ACTUAL,EXPECTED)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="age-heaping---interpreting-results" class="slide level2">
+<h2>Age heaping - interpreting results</h2>
+<ul>
+<li><p>The <code>CHISQ.TEST()</code> function returns the p-value of the chi-square test.</p></li>
+<li><p>If <strong>p-value is less than 0.05</strong>, then we can say that the difference between the actual and expected is not by chance alone and that there is most likely age heaping in the data.</p></li>
 </ul>
 
 </section>
