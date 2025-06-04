@@ -6,14 +6,11 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="index_files/libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="index_files/libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="index_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.7.31">
 
   <meta name="author" content="Ernest Guevarra">
-  <title>Exploratory Data Analysis - Univariate Statistics</title>
+  <title>Exploratory Data Analysis - Bivariate Statistics</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -199,7 +196,7 @@
     <div class="slides">
 
 <section id="title-slide" data-background-color="#002147" class="quarto-title-block center">
-  <h1 class="title">Exploratory Data Analysis - Univariate Statistics</h1>
+  <h1 class="title">Exploratory Data Analysis - Bivariate Statistics</h1>
   <p class="subtitle">Data-driven Decision-making</p>
 
 <div class="quarto-title-authors">
@@ -217,349 +214,68 @@ Ernest Guevarra
 </div>
 
 </section>
-<section id="outline" class="slide level2">
-<h2>Outline</h2>
-<ol type="1">
-<li><p>Continuous data/variable</p>
-<p>1.1 Numerical features<br>
-1.2 Other features that should be checked</p></li>
-<li><p>Categorical data/variable</p>
-<p>2.1 Nominal<br>
-2.2 Ordinal</p></li>
-</ol>
-</section>
-<section id="continuous-datavariable" class="slide level2">
-<h2>Continuous data/variable</h2>
-<ul>
-<li><p>Continuous data/variable is data that can take any numerical value.</p></li>
-<li><p>Height, weight, temperature and length are all examples of continuous data.</p></li>
-</ul>
-</section>
-<section id="numerical-features-of-continuous-datavariable" class="slide level2">
-<h2>Numerical features of continuous data/variable</h2>
-<ul>
-<li><p>Measure of <strong>central tendency</strong></p></li>
-<li><p>Measure of <strong>dispersion</strong> (or variability/spread)</p></li>
-<li><p>Measure of <strong>skewness</strong> and <strong>kurtosis</strong></p></li>
-</ul>
-</section>
-<section id="other-related-features-of-continuous-datavariable" class="slide level2">
-<h2>Other related features of continuous data/variable</h2>
-<ul>
-<li><p><strong>Distribution</strong> of continuous data/variable - can be <em>symmetric</em> or <em>asymmetric</em> or <em>multimodal</em></p></li>
-<li><p><strong>Outliers</strong> - some values that are far from the rest</p></li>
-<li><p><strong>Heaping</strong> - some values occur unexpectedly often</p></li>
-<li><p><strong>Digit preference</strong> - only certain values are found as there is a preference to round off to a specific value</p></li>
-<li><p><strong>Implausible</strong> - values outside of plausible or likely range</p></li>
-</ul>
-</section>
-<section id="measure-of-central-tendency" class="slide level2">
-<h2>Measure of central tendency</h2>
-<ul>
-<li><p>In statistics, measure of central tendency is a central or typical value for a probability distribution.</p></li>
-<li><p>Most common are <strong>mean</strong>, <strong>median</strong>, <strong>mode</strong> but there are many other measures of central tendency</p></li>
-<li><p>Not all measures of central tendency are <strong>robust</strong></p></li>
-</ul>
-</section>
-<section id="measure-of-central-tendency---mean" class="slide level2">
-<h2>Measure of central tendency - mean</h2>
-<p><span class="math display">\[ \text{mean/average} ~ = ~ \frac{\sum{\text{values}}}{n_\text{values}} \]</span></p>
-<ul>
-<li><strong>Mean</strong> is a <strong>non-robust</strong> measure of location because it is susceptible/sensitive to a few extreme values in the data</li>
-</ul>
-<aside class="notes">
-<p><strong>Mean</strong>, or what some of us would call <em>average</em>, is the sum of all the values divided by the total number of values</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="measure-of-central-tendency---mean-1" class="slide level2">
-<h2>Measure of central tendency - mean</h2>
-<div class="columns">
-<div class="column" style="width:30%;">
-<p><a href="../../images/student_scores_01.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="../../images/student_scores_01.png"></a></p>
-</div><div class="column" style="width:70%;">
-<ul>
-<li><p>Consider this data of test scores of ten students.</p></li>
-<li><p>8 out of the 10 students did really well with scores 75 and higher but two students got really low scores.</p></li>
-<li><p>Calculating the mean score across the 10 students:</p></li>
-</ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href=""></a>=AVERAGE(B2:B11)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>we get <strong>71.7</strong></p>
-</div></div>
-</section>
-<section id="measure-of-central-tendency---median" class="slide level2">
-<h2>Measure of central tendency - median</h2>
-<ul>
-<li><p><strong>Median</strong> is the 50th quantile of the observations</p></li>
-<li><p>Median is a robust measure of central tendency because it is less influenced by extreme values.</p></li>
-<li><p>Calculating the median of the scores in the previous example:</p></li>
-</ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href=""></a>=MEDIAN(B2:B11)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>we get <strong>87.5</strong></p>
-</section>
-<section id="measure-of-central-tendency---mean-vs-median" class="slide level2">
-<h2>Measure of central tendency - mean vs median</h2>
-<ul>
-<li><p>The mean and the median can be very different from each other</p></li>
-<li><p>If <code>median &gt; mean</code>, this would indicate that the continuous variable has some extremely low values</p></li>
-<li><p>If <code>median &lt; mean</code>, this would indicate that the continuous variable has some extremely high values</p></li>
-<li><p>We should be using <code>median</code> instead of <code>mean</code> when performing summary measures for continuous variables</p></li>
-</ul>
+<section id="on-scatter-plots" class="slide level2 center">
+<h2>On scatter plots</h2>
+<blockquote>
+<p>Scatter plots are glorious. Of all the major chart types, they are by far the most powerful. They allow us to quickly understand relationships] that would be nearly impossible to recognize in a table or a different type of chart. … Michael Friendly and Daniel Denis, psychologists and historians of graphics, call the scatter plot the most “generally useful invention in the history of statistical graphics.”</p>
+</blockquote>
+<p><a href="https://qz.com/1235712/the-origins-of-the-scatter-plot-data-visualizations-greatest-invention">Dan Kopf</a></p>
 </section>
 <section id="exercise" class="slide level2 center">
 <h2>Exercise</h2>
-<p>Using the student nutrition data in our exercises project, add median of age, weight, and height to the summary tables and compare with the mean values we got yesterday.</p>
+<p>We will use the <code>cyclones</code> dataset for learning and creating scatter plots.</p>
 </section>
-<section id="measure-of-dispersion" class="slide level2">
-<h2>Measure of dispersion</h2>
+<section id="using-scatter-plots-to-identify-outliers" class="slide level2">
+<h2>Using scatter plots to identify outliers</h2>
 <ul>
-<li><p>describes the extent to which values of a continuous variable are spread out or scattered.</p></li>
-<li><p>provides information about the data’s variability or “spread” around a central value.</p></li>
-<li><p>common measures of dispersion include <em>variance</em>, <em>standard deviation</em>, and <em>interquartile range (IQR)</em>.</p></li>
+<li><p>identifying outliers by eye</p></li>
+<li><p>identifying outliers based on statistical distance</p></li>
 </ul>
 </section>
-<section id="measure-of-dispersion---standard-deviation-and-variance" class="slide level2">
-<h2>Measure of dispersion - standard deviation and variance</h2>
-<ul>
-<li>most popular choice for measure of dispersion but are <strong>not robust</strong> to extreme values or outliers</li>
-</ul>
-<!-- $$ \text{standard deviation} ~ = ~ \sqrt{{\sum_{i = 1} ^ n} \frac{(x_i - \bar{x}) ^ 2}{n - 1}} $$ -->
-<ul>
-<li>in Excel, you can calculate standard deviation using the <code>=STDEV()</code> function as follows (using the student scores example)</li>
-</ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a href=""></a>=STDEV(B2:B11)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>which gives <strong>31.6756128</strong></p>
+<section id="mahalanobis-distance" class="slide level2">
+<h2>Mahalanobis distance</h2>
 </section>
-<section id="measure-of-dispersion---interquartile-range-iqr" class="slide level2">
-<h2>Measure of dispersion - interquartile range (IQR)</h2>
+<section id="numerical-measures-of-association" class="slide level2">
+<h2>Numerical measures of association</h2>
 <ul>
-<li><p>IQR is the difference between 1st and 3rd quartile of the values of the continuous variable and is a more <strong>robust</strong> measure of spread.</p></li>
-<li><p>Excel doesn’t have a function to calculate IQR but it can be calculated as follows (using the student scores example):</p></li>
-</ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a href=""></a>=QUARTILE(B2:B11,3)-QUARTILE(B2:B11,1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>which gives <strong>13.75</strong></p>
-<aside class="notes">
-<p>The difference in the standard deviation and the IQR indicates how much the standard deviation is influenced by the two extremely low scores</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="boxplots" class="slide level2">
-<h2>Boxplots</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p><a href="../../images/boxplot_muac.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img data-src="../../images/boxplot_muac.png"></a></p>
-</div><div class="column" style="width:60%;">
-<p>Boxplots or box-and-whisker plots are based on the following reduced summary of the data.</p>
-<ul>
-<li><strong>Median</strong></li>
-<li><strong>Hinges</strong>: interquartile range</li>
-<li><strong>Inner fences:</strong> the observation that is the most extreme, but within 1.5 x the length of the difference between the hinges.</li>
-<li><strong>Outer fences</strong>: twice that of the inner fence.</li>
-</ul>
-</div></div>
-</section>
-<section id="exercise-1" class="slide level2">
-<h2>Exercise</h2>
-<ul>
-<li><p>Plot box-and-whisker plot for the weight of the students by sex</p></li>
-<li><p>Plot box-and-whisker plot for the weight of the students by school</p></li>
-<li><p>Plot box-and-whisker plot for the weight of the students by region</p></li>
+<li><p>Correlation - Spearman’s rank correlation (Spearman’s rho)</p></li>
+<li><p>Correlation - Kendall’s tau correlaetion</p></li>
 </ul>
 </section>
-<section id="histograms" class="slide level2">
-<h2>Histograms</h2>
+<section id="spearmans-rank-correlation" class="slide level2">
+<h2>Spearman’s Rank Correlation</h2>
 <ul>
-<li><p>graphical representation of the distribution of numerical data.</p></li>
-<li><p>It uses adjacent bars to show the frequency or count of data points within specified ranges, known as bins.</p></li>
-<li><p>Histograms provide insights into the data distribution, such as whether it is normally distributed (bell-shaped), skewed, or has multiple peaks (multimodal).</p></li>
-<li><p>They help identify patterns like clusters, gaps, and outliers in the data.</p></li>
+<li>Get the rank of each of the two variables you are comparing. This can be done in Excel using the <code>RANK.AVG()</code> function</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href=""></a>=RANK.AVG(VALUE,ARRAY)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Calculate the Spearman’s coefficient</li>
+</ul>
+<p><span class="math display">\[ \rho ~ = ~ 1 - \frac{6 \sum d ^ 2}{n(n ^ 2 -1)} \]</span></p>
+<ul>
+<li>This can be calculated manually or we can use the `</li>
 </ul>
 </section>
-<section id="exercise-2" class="slide level2">
-<h2>Exercise</h2>
+<section id="spearmans-rank-correlation---interpretation" class="slide level2">
+<h2>Spearman’s Rank Correlation - interpretation</h2>
 <ul>
-<li><p>Plot histogram for the height of the students by sex</p></li>
-<li><p>Plot histogram for the height of the students by school</p></li>
-<li><p>Plot histogram for the height of the students by region</p></li>
+<li>Perfect positive correlation = +1</li>
+<li>Perfect negative correlation = -1</li>
+<li>No correlation = 0</li>
+<li>Weak correlation = +/- 0.1 to +/- 0.3</li>
+<li>Moderate correlation = +/- 0.4 to +/- 0.6</li>
+<li>Strong correlation = +/- 0.7 to +/- 0.9</li>
 </ul>
 </section>
-<section id="quantile-quantile-plot" class="slide level2">
-<h2>Quantile-quantile plot</h2>
+<section id="kendalls-rank-correlation" class="slide level2">
+<h2>Kendall’s Rank Correlation</h2>
 <ul>
-<li><p>tests whether a continuous variable follows a particular theoretical distribution</p></li>
-<li><p>usually, we test whether our data is normally distributed, that is <code>mean = 0</code> and <code>standard deviation = 1</code></p></li>
-</ul>
-</section>
-<section id="quantile-quantile-plot---step-1" class="slide level2">
-<h2>Quantile-Quantile plot - Step 1</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p><a href="../../images/qqplot_01.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img data-src="../../images/qqplot_01.png"></a></p>
-</div><div class="column" style="width:60%;">
-<p>Sort/order the continuous variable in ascending order (lowest to highest) and give each row of the data a rank starting at 1.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a href=""></a>=SORT(B2:B11)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div></div>
-</section>
-<section id="quantile-quantile-plot---step-2" class="slide level2">
-<h2>Quantile-Quantile plot - Step 2</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><a href="../../images/qqplot_03.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img data-src="../../images/qqplot_03.png"></a></p>
-</div><div class="column" style="width:50%;">
-<p>Calculate the actual cumulative probability by substracting <code>0.5</code> from the rank and then divided by the total number of observations.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a href=""></a>=(C2 - 0.5)/10</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div></div>
-</section>
-<section id="quantile-quantile-plot---step-3" class="slide level2">
-<h2>Quantile-Quantile plot - Step 3</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<p><a href="../../images/qqplot_05.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img data-src="../../images/qqplot_05.png"></a></p>
-</div><div class="column" style="width:40%;">
-<p>Calculate the theoretical cumulative probability using the <code>NORM.S.INV()</code> function in Excel.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a href=""></a>=NORM.S.INV(D2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Drag or copy this function down to the rest of the column.</p>
-</div></div>
-</section>
-<section id="quantile-quantile-plot---step-4" class="slide level2">
-<h2>Quantile-Quantile plot - Step 4</h2>
+<li><p>Get the rank of each of the two variables you are comparing. This can be done in Excel using the <code>RANK.AVG()</code> function</p></li>
+<li><p>Sort the</p></li>
+<li><p>Determine concordant and discordant pairs</p>
 <ul>
-<li><p>Calculate parameters for the QQ line.</p></li>
-<li><p>Calculate the 25th and 75th quantile of the continuous data.</p></li>
-</ul>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a href=""></a>=QUARTILE(B2:B11,1)    ## 25th quantile</span>
-<span id="cb8-2"><a href=""></a>=QUARTILE(B2:B11,3)    ## 75th quantile</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li>Calculate the theoretical 25th and 75th quantile.</li>
-</ul>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a href=""></a>=NORM.INV(0.25,0,1)    ## 25th quantile</span>
-<span id="cb9-2"><a href=""></a>=NORM.INV(0.75,0,1)    ## 75th quantile</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="quantile-quantile-plot---step-4-1" class="slide level2">
-<h2>Quantile-Quantile plot - Step 4</h2>
-<ul>
-<li>Calculate the slope and intercept of the QQ line</li>
-</ul>
-<p><span class="math display">\[ \text{slope} ~ = ~ \frac{q3_{obs} - q1_{obs}}{q3_{theo} - q1_{theo}} \]</span> <span class="math display">\[ \text{intercept} ~ = ~ q1_{obs} - slope \times q1_{theo} \]</span></p>
-</section>
-<section id="quantile-quantile-plot---step-5" class="slide level2 center">
-<h2>Quantile-Quantile plot - Step 5</h2>
-<p>Create the plot.</p>
-</section>
-<section id="digit-preference" class="slide level2">
-<h2>Digit preference</h2>
-<ul>
-<li><p>Digit preference is the observation that the final number in a measurement occurs with a greater frequency than is expected by chance.</p></li>
-<li><p>This can occur because of rounding, the practice of increasing or decreasing the value in a measurement to the nearest whole or half unit, or because data are made up.</p></li>
-</ul>
-</section>
-<section id="digit-preference---testing" class="slide level2">
-<h2>Digit preference - testing</h2>
-<ul>
-<li><p>Extract the last digit of a continuous variable. You can do this in Excel using the <code>RIGHT()</code> function.</p></li>
-<li><p>Using pivot tables, create a summary table of the counts per last digit.</p></li>
-<li><p>Calculate the theoretical/expected number of counts per last digit if there was no digit preference</p></li>
-</ul>
-<p><span class="math display">\[ \text{Total number of records / 10} \]</span></p>
-</section>
-<section id="digit-preference---testing-1" class="slide level2">
-<h2>Digit preference - testing</h2>
-<ul>
-<li>Calculate the chi-square test statistic</li>
-</ul>
-<p><span class="math display">\[ \chi ^ 2 ~ = ~ \sum \frac{(O_i - E_i) ^ 2}{E_i} \]</span></p>
-<ul>
-<li>Calculate the digit preference score</li>
-</ul>
-<p><span class="math display">\[ DPS ~ = ~ \sqrt{\frac{\chi^2}{\sum O_i \times (n_{digits} - 1)}} \]</span></p>
-</section>
-<section id="digit-preference-score" class="slide level2">
-<h2>Digit preference score</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: left;"><strong>DPS</strong></th>
-<th style="text-align: left;"><strong>Classification</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">&lt; 8</td>
-<td style="text-align: left;">Excellent</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">from 8 to &lt; 12</td>
-<td style="text-align: left;">Good</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">from 12 to &lt; 20</td>
-<td style="text-align: left;">Acceptable</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">20 or higher</td>
-<td style="text-align: left;">Problematic</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="age-heaping" class="slide level2">
-<h2>Age heaping</h2>
-<ul>
-<li><p>tendency to report children’s ages to the nearest year or adults’ ages to the nearest multiple of five or ten years.</p></li>
-<li><p>age heaping is very common that is why most reported national statistics use broad age groups</p></li>
-</ul>
-</section>
-<section id="age-heaping---testing" class="slide level2">
-<h2>Age heaping - testing</h2>
-<ul>
-<li><p>Select an appropriate divisor for your age data (6 or 12 if age is reported in months, 5 or 10 if age is reported in years)</p></li>
-<li><p>apply the <code>modulo</code> operator to divide the ages by the selected divisor. In Excel, there is the function <code>MOD()</code></p></li>
-</ul>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb10-1"><a href=""></a>=MOD(AGE,DIVISOR)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li>The modulo operator returns the remainder value of the result of the division performed</li>
-</ul>
-</section>
-<section id="age-heaping---testing-1" class="slide level2">
-<h2>Age heaping - testing</h2>
-<ul>
-<li><p>Using pivot tables, create a summary table of the counts per remainder values.</p></li>
-<li><p>Calculate the theoretical/expected number of counts per remainder if there was no age heaping</p></li>
-<li><p>Perform a chi-square test on the observed and expected values to see if there is a significant difference between the values. In Excel, use the <code>CHISQ.TEST()</code> function</p></li>
-</ul>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb11-1"><a href=""></a>=CHISQ.TEST(ACTUAL,EXPECTED)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="age-heaping---interpreting-results" class="slide level2">
-<h2>Age heaping - interpreting results</h2>
-<ul>
-<li><p>The <code>CHISQ.TEST()</code> function returns the p-value of the chi-square test.</p></li>
-<li><p>If <strong>p-value is less than 0.05</strong>, then we can say that the difference between the actual and expected is not by chance alone and that there is most likely age heaping in the data.</p></li>
-</ul>
-</section>
-<section id="categorical-amd-nominal-variables" class="slide level2">
-<h2>Categorical amd nominal variables</h2>
-<ul>
-<li><p>The ordering of categorical and nominal variables should be done meaningfully with the intended message in mind.</p></li>
-<li><p>If there is a natural ordering to the categorical variable, use this grouping when reporting on summary tables and in plots.</p></li>
-<li><p>If there is no natural ordering, arrange the categories based on the values (either in ascending or descending order as appropriate)</p></li>
+<li>Concordant - rank in second variable is greater than the rank for first variable</li>
+</ul></li>
 </ul>
 
 </section>
@@ -986,38 +702,6 @@ Ernest Guevarra
         }
       });
       </script>
-    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
-    (function() {
-      let previousOnload = window.onload;
-      window.onload = () => {
-        if (previousOnload) {
-          previousOnload();
-        }
-        lightboxQuarto.on('slide_before_load', (data) => {
-          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-          const href = trigger.getAttribute('href');
-          if (href !== null) {
-            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-            if (imgEl !== null) {
-              const srcAttr = imgEl.getAttribute("src");
-              if (srcAttr && srcAttr.startsWith("data:")) {
-                slideConfig.href = srcAttr;
-              }
-            }
-          } 
-        });
-      
-        lightboxQuarto.on('slide_after_load', (data) => {
-          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(slideNode);
-          }
-        });
-      
-      };
-      
-    })();
-              </script>
     
 
 </body></html>
