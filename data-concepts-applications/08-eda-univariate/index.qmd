@@ -12,13 +12,13 @@ engine: knitr
 
 1. Continuous data/variable
 
-     1.1 Numerical features
-     1.2 Other features that should be checked
+     1.1 Numerical features    
+     1.2 Other features that should be checked    
 
 2. Categorical data/variable
 
-     2.1 Nominal
-     2.2 Ordinal
+     2.1 Nominal    
+     2.2 Ordinal    
 
 ## Continuous data/variable
 
@@ -279,11 +279,14 @@ Calculate the actual cumulative probability by substracting `0.5` from the rank 
 
 ::: {.column width="40%"}
 
-Calculate the theoretical cumulative probability using the `NORM.DIST()` function in Excel.
+Calculate the theoretical cumulative probability using the `NORM.S.INV()` function in Excel.
 
 ```Excel
-=NORM.DIST(D2:D11,0,1,TRUE)
+=NORM.S.INV(D2)
 ```
+
+Drag or copy this function down to the rest of the column.
+
 :::
 
 ::::
@@ -302,8 +305,8 @@ Calculate the theoretical cumulative probability using the `NORM.DIST()` functio
 * Calculate the theoretical 25th and 75th quantile.
 
 ```Excel
-=NORM.DIST(0.25,0,1,TRUE)    ## 25th quantile
-=NORM.DIST(0.75,0,1,TRUE)    ## 75th quantile
+=NORM.INV(0.25,0,1)    ## 25th quantile
+=NORM.INV(0.75,0,1)    ## 75th quantile
 ```
 
 ## Quantile-Quantile plot - Step 4
@@ -313,11 +316,9 @@ Calculate the theoretical cumulative probability using the `NORM.DIST()` functio
 $$ \text{slope} ~ = ~ \frac{q3_{obs} - q1_{obs}}{q3_{theo} - q1_{theo}} $$
 $$ \text{intercept} ~ = ~ q1_{obs} - slope \times q1_{theo} $$
 
-
 ## Quantile-Quantile plot - Step 5 {.center}
 
 Create the plot.
-
 
 ## Digit preference
 
@@ -325,10 +326,68 @@ Create the plot.
 
 * This can occur because of rounding, the practice of increasing or decreasing the value in a measurement to the nearest whole or half unit, or because data are made up.
 
-
 ## Digit preference - testing
 
 * Extract the last digit of a continuous variable. You can do this in Excel using the `RIGHT()` function.
 
 * Using pivot tables, create a summary table of the counts per last digit.
 
+* Calculate the theoretical/expected number of counts per last digit if there was no digit preference
+
+$$ \text{Total number of records / 10} $$
+
+## Digit preference - testing
+
+* Calculate the chi-square test statistic
+
+$$ \chi ^ 2 ~ = ~ \sum \frac{(O_i - E_i) ^ 2}{E_i} $$
+
+* Calculate the digit preference score
+
+$$ DPS ~ = ~ \sqrt{\frac{\chi^2}{\sum O_i \times (n_{digits} - 1)}} $$
+
+## Digit preference score
+
+**DPS** | **Classification**
+:--- | :---
+< 8 | Excellent
+from 8 to < 12 | Good
+from 12 to < 20 | Acceptable
+20 or higher | Problematic
+
+
+## Age heaping
+
+* tendency to report children's ages to the nearest year or adults' ages to the nearest multiple of five or ten years.
+
+* age heaping is very common that is why most reported national statistics use broad age groups
+
+
+## Age heaping - testing
+
+* Select an appropriate divisor for your age data (6 or 12 if age is reported in months, 5 or 10 if age is reported in years)
+
+* apply the `modulo` operator to divide the ages by the selected divisor. In Excel, there is the function `MOD()`
+
+```Excel
+=MOD(AGE,DIVISOR)
+```
+
+* The modulo operator returns the remainder value of the result of the division performed
+
+## Age heaping - testing
+
+* Using pivot tables, create a summary table of the counts per remainder values.
+
+* Calculate the theoretical/expected number of counts per remainder if there was no age heaping
+
+* Perform a chi-square test on the observed and expected values to see if there is a significant difference between the values. In Excel, use the `CHISQ.TEST()` function
+
+```Excel
+=CHISQ.TEST(ACTUAL,EXPECTED)
+```
+## Age heaping - interpreting results
+
+* The `CHISQ.TEST()` function returns the p-value of the chi-square test.
+
+* If **p-value is less than 0.05**, then we can say that the difference between the actual and expected is not by chance alone and that there is most likely age heaping in the data.
