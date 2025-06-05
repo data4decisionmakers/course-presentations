@@ -1,0 +1,142 @@
+---
+title: "Epidemiological Statistics"
+subtitle: "Data-driven Decision-making"
+title-slide-attributes: 
+  data-background-color: "#002147"
+lightbox: true
+fig-cap-location: top
+engine: knitr
+---
+
+## Outline
+
+1. Contingency table
+
+2. Risk ratio
+
+3. Odds ratio
+
+4. Comparing two groups
+
+## The contingency table
+
+* also known as a cross-tabulation
+
+* used in statistics to display the relationship between two or more categorical variables
+
+* organises data by showing the frequency of observations that fall into various combinations of the categories of the variables being examined.
+
+* usually called a two-by-two table, contingency tables can be created with more than two categories per group.
+
+## The contingency table
+
+![](../../images/contingency_table.png){fig-align="center"}
+
+## Exercise {.center}
+
+Creating contingency tables in Excel can be easily done using pivot tables. Let's try it with the `fem.xlsx` dataset.
+
+## Risk ratio
+
+* also called relative risk ratio (RRR)
+
+* a measure of the risk of a certain event happening in one group (usually called the exposed group) compared to the risk of the same event happening in another group (usually called the unexposed group)
+
+* it indicates how much more likely the outcome is in the exposed group compared to the unexposed group
+
+## Risk ratio - understanding exposure
+
+* because risk ratio was developed for disease epidemiology, the term exposure has been used which usually pertains to exposure to a risk factor or known causative agent of a particular disease outcome
+
+* however, exposure in a general sense can also mean exposure to a factor or a condition that is known to be associated to a certain outcome which doesn't have to be a disease
+
+* exposure to being female for an outcome of good grades; exposure to being married for an outcome of owning your house, etc.
+
+## Risk ratio - calculation {.center}
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+![](../../images/contingency_table.png){fig-align="center"}
+
+![](../../images/contingency_example_data.png){fig-align="center"}
+
+:::
+
+
+::: {.column width="60%"}
+
+$$ \text{risk ratio} ~ = ~ \frac{\frac{A}{A+B}}{\frac{C}{C+D}} ~ = ~ \frac{A \times (C+D)}{C \times {(A+B)}} $$
+
+To get used to this formula, let's calculate RRR by hand using the example data on the left.
+
+:::
+
+::::
+
+## Risk ratio - interpretation
+
+**Risk ratio** | **Interpretation**
+:--- | :---
+`RR = 1` | Exposure does not affect outcome
+`RR < 1` | Risk of outcome is decreased by the exposure (protective factor)
+`RR > 1` | Risk of outcome is increased by the exposure (risk factor)
+
+## Exercise {.center}
+
+Now, let's try to calculate RRR using the `fem.xlsx`. Let's try to identify risk factors for **suicidal ideation (outcome)**. Let's test whether _non-normal sleep_, _no interest in sex_, _severe anxiety_, and/or _moderate to severe depression_ are risk factors to suicidal ideation.
+
+## Odds ratio
+
+* measure of association between an exposure and an outcome
+
+* represents the odds that an outcome will occur given a particular exposure compared to the odds of the outcome occurring in the absence of the exposure
+
+## Odds ratio - calculation
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+![](../../images/contingency_table.png){fig-align="center"}
+
+![](../../images/contingency_example_data.png){fig-align="center"}
+
+:::
+
+
+::: {.column width="60%"}
+
+$$ \text{odds ratio} ~ = ~ \frac{\frac{A}{B}}{\frac{C}{D}} ~ = ~ \frac{A \times D}{B \times C} $$
+
+To get used to this formula, let's calculate OR by hand using the example data on the left.
+
+:::
+
+::::
+
+## Odds ratio - interpretation
+
+**Odds ratio** | **Interpretation**
+:--- | :---
+`OR = 1` | Exposure does not affect odds of outcome
+`OR > 1` | Exposure associated with higher odds of outcome
+`OR < 1` | Exposure associated with lower odds of outcome
+
+## Exercise {.center}
+
+Now, let's try to calculate OR using the `fem.xlsx`. Let's try to identify risk factors for **suicidal ideation (outcome)**. Let's test whether _non-normal sleep_, _no interest in sex_, _severe anxiety_, and/or _moderate to severe depression_ are risk factors to suicidal ideation.
+
+
+## Difference between risk ratio and odds ratio
+
+* RR approximates OR for outcomes that are rare (< 10%) and as such can be reported interchangeably
+
+* In non-rare outcomes, OR will tend to have greater magnitude than RR but always in the same direction (negative or positive)
+
+* In specific study designs, the total population-at-risk is not known hence RR cannot be calculated
+
+
+
+
