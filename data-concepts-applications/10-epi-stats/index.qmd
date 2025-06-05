@@ -160,8 +160,26 @@ Now, let's try to calculate OR using the `fem.xlsx`. Let's try to identify risk 
 
 ## Comparing means of two groups
 
+:::: {.columns}
+
+::: {.column width="40%"}
+
+![](../../images/t-test.png)
+
+:::
+
+::: {.column width="60%"}
 * In Excel, there is a built in function that performs the t-test, the `T.TEST()` function
 
+```Excel
+=T.TEST(array1, array2, tails, type)
+```
 
+* For `tails`, always specify 2 to detect either increase or decrease in means
 
+* For `type`, ideally test for similarity of variance. If unable to test, apply the `t.test` twice `type = 2` and then `type = 3` then assess which result is applicable to your data.
+
+:::
+
+::::
 
