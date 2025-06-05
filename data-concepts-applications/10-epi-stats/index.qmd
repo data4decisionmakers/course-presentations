@@ -142,7 +142,6 @@ $$ 95\% ~ CI ~ = ~ e ^ {\log(OR) ~ \pm ~ 1.96 ~ \times ~ \sqrt{\frac{1}{A} + \fr
 
 Now, let's try to calculate OR using the `fem.xlsx`. Let's try to identify risk factors for **suicidal ideation (outcome)**. Let's test whether _non-normal sleep_, _no interest in sex_, _severe anxiety_, and/or _moderate to severe depression_ are risk factors to suicidal ideation.
 
-
 ## Difference between risk ratio and odds ratio
 
 * RR approximates OR for outcomes that are rare (< 10%) and as such can be reported interchangeably
@@ -150,6 +149,18 @@ Now, let's try to calculate OR using the `fem.xlsx`. Let's try to identify risk 
 * In non-rare outcomes, OR will tend to have greater magnitude than RR but always in the same direction (negative or positive)
 
 * In specific study designs, the total population-at-risk is not known hence RR cannot be calculated
+
+## Comparing means of two groups
+
+* Sometimes, we want to compare summary numerical values between one group and another.
+
+* Unlike a contingency table that summarises the counts of the variables, this summary table will usually have the mean or median of the numerical values.
+
+* We can use the t-test (also known as the Student t-test) to compare whether the mean of the values for one group is different from another group.
+
+## Comparing means of two groups
+
+* In Excel, there is a built in function that performs the t-test, the `T.TEST()` function
 
 
 
