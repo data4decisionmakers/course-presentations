@@ -75,6 +75,16 @@ To get used to this formula, let's calculate RRR by hand using the example data 
 
 ::::
 
+## Risk ratio - confidence intervals
+
+* first calculate the standard error of the natural logarithm of RRR
+
+$$ SE_{log(RRR)} ~ = ~ \sqrt{\frac{C}{A(A+C)} ~ + ~ \frac{D}{B(B+D)}}$$
+
+* then calculate 95% confidence interval
+
+$$ 95\% ~ CI ~ = ~ e ^ {\log(RRR) ~ \pm ~ 1.96 ~ \times ~ SE_{\log(RRR)}} $$
+
 ## Risk ratio - interpretation
 
 **Risk ratio** | **Interpretation**
@@ -115,6 +125,10 @@ To get used to this formula, let's calculate OR by hand using the example data o
 :::
 
 ::::
+
+## Odds ratio - confidence intervals
+
+$$ 95\% ~ CI ~ = ~ e ^ {\log(OR) ~ \pm ~ 1.96 ~ \times ~ \sqrt{\frac{1}{A} + \frac{1}{B} + \frac{1}{C} + \frac{1}{D}}}  $$
 
 ## Odds ratio - interpretation
 
