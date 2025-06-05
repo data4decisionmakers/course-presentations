@@ -216,6 +216,17 @@ Ernest Guevarra
 <p>To get used to this formula, let’s calculate RRR by hand using the example data on the left.</p>
 </div></div>
 </section>
+<section id="risk-ratio---confidence-intervals" class="slide level2">
+<h2>Risk ratio - confidence intervals</h2>
+<ul>
+<li>first calculate the standard error of the natural logarithm of RRR</li>
+</ul>
+<p><span class="math display">\[ SE_{log(RRR)} ~ = ~ \sqrt{\frac{C}{A(A+C)} ~ + ~ \frac{D}{B(B+D)}}\]</span></p>
+<ul>
+<li>then calculate 95% confidence interval</li>
+</ul>
+<p><span class="math display">\[ 95\% ~ CI ~ = ~ e ^ {\log(RRR) ~ \pm ~ 1.96 ~ \times ~ SE_{\log(RRR)}} \]</span></p>
+</section>
 <section id="risk-ratio---interpretation" class="slide level2">
 <h2>Risk ratio - interpretation</h2>
 <table class="caption-top">
@@ -274,6 +285,10 @@ Ernest Guevarra
 <p><span class="math display">\[ \text{odds ratio} ~ = ~ \frac{\frac{A}{B}}{\frac{C}{D}} ~ = ~ \frac{A \times D}{B \times C} \]</span></p>
 <p>To get used to this formula, let’s calculate OR by hand using the example data on the left.</p>
 </div></div>
+</section>
+<section id="odds-ratio---confidence-intervals" class="slide level2">
+<h2>Odds ratio - confidence intervals</h2>
+<p><span class="math display">\[ 95\% ~ CI ~ = ~ e ^ {\log(OR) ~ \pm ~ 1.96 ~ \times ~ \sqrt{\frac{1}{A} + \frac{1}{B} + \frac{1}{C} + \frac{1}{D}}}  \]</span></p>
 </section>
 <section id="odds-ratio---interpretation" class="slide level2">
 <h2>Odds ratio - interpretation</h2>
