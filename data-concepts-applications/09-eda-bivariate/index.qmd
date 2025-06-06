@@ -82,7 +82,7 @@ $$ \rho ~ = ~ 1 - \frac{6 \sum d ^ 2}{n(n ^ 2 -1)} $$
 
 * Calculate tau coefficient
 
-$$ \tau ~ = ¬ \frac{n_{concordant} - n_{discordant}}{\frac{n(n-1)}{2}}   $$
+$$ \tau ~ = ~ \frac{n_{concordant} - n_{discordant}}{\frac{n(n-1)}{2}}   $$
 
 ## Kenall's Rank Correlation - interpretation
 
