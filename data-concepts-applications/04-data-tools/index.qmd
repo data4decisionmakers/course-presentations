@@ -163,15 +163,23 @@ flowchart LR
 
 ## No empty cell {.center}
 
+![](../../images/no_empty_cell.jpg){fig-align="center"}
+
 ## Put just one thing in a cell {.center}
 
 ## Make it a rectangle {.center}
 
+![](../../images/non_rectangular_layout.jpg){fig-align="center"}
+
 ## Create a data dictionary {.center}
+
+![](../../images/data_dictionary.jpg){fig-align="center"}
 
 ## No calculations in the raw data file {.center}
 
 ## Do not use font colour or highlighting as data {.center}
+
+![](../../images/no_color_formatting.jpg){fig-align="center"}
 
 ## Make backups {.center}
 

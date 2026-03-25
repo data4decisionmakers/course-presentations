@@ -21,7 +21,7 @@ jobs:
       - name: Install system dependencies
         run: |
           apt-get update && apt-get install -y --no-install-recommends \
-          libxt6 libglpk-dev gh curl jq libuv1-dev
+          libxt6 libglpk-dev gh curl jq libuv1-dev cmake
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
