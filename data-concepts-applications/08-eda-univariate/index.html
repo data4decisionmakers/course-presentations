@@ -6,11 +6,11 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="index_files/libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="index_files/libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="index_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.31">
+  <meta name="generator" content="quarto-1.9.36">
 
   <meta name="author" content="Ernest Guevarra">
   <title>Exploratory Data Analysis - Univariate Statistics</title>
@@ -20,6 +20,9 @@
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -98,7 +101,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-f563837468303362081e247dddd440d0.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-2740581606dc327e82f18f789b69d8a0.css">
   <link rel="stylesheet" href="styles.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -292,7 +295,7 @@ Ernest Guevarra
 <li><p>8 out of the 10 students did really well with scores 75 and higher but two students got really low scores.</p></li>
 <li><p>Calculating the mean score across the 10 students:</p></li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href=""></a>=AVERAGE(B2:B11)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href=""></a>=AVERAGE(B2:B11)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>we get <strong>71.7</strong></p>
 </div></div>
 </section>
@@ -303,7 +306,7 @@ Ernest Guevarra
 <li><p>Median is a robust measure of central tendency because it is less influenced by extreme values.</p></li>
 <li><p>Calculating the median of the scores in the previous example:</p></li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href=""></a>=MEDIAN(B2:B11)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href=""></a>=MEDIAN(B2:B11)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>we get <strong>87.5</strong></p>
 </section>
 <section id="measure-of-central-tendency---mean-vs-median" class="slide level2">
@@ -336,7 +339,7 @@ Ernest Guevarra
 <ul>
 <li>in Excel, you can calculate standard deviation using the <code>=STDEV()</code> function as follows (using the student scores example)</li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a href=""></a>=STDEV(B2:B11)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a href=""></a>=STDEV(B2:B11)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>which gives <strong>31.6756128</strong></p>
 </section>
 <section id="measure-of-dispersion---interquartile-range-iqr" class="slide level2">
@@ -345,7 +348,7 @@ Ernest Guevarra
 <li><p>IQR is the difference between 1st and 3rd quartile of the values of the continuous variable and is a more <strong>robust</strong> measure of spread.</p></li>
 <li><p>Excel doesn’t have a function to calculate IQR but it can be calculated as follows (using the student scores example):</p></li>
 </ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a href=""></a>=QUARTILE(B2:B11,3)-QUARTILE(B2:B11,1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a href=""></a>=QUARTILE(B2:B11,3)-QUARTILE(B2:B11,1)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>which gives <strong>13.75</strong></p>
 <aside class="notes">
 <p>The difference in the standard deviation and the IQR indicates how much the standard deviation is influenced by the two extremely low scores</p>
@@ -415,7 +418,7 @@ Ernest Guevarra
 <p><a href="../../images/qqplot_01.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img data-src="../../images/qqplot_01.png"></a></p>
 </div><div class="column" style="width:60%;">
 <p>Sort/order the continuous variable in ascending order (lowest to highest) and give each row of the data a rank starting at 1.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a href=""></a>=SORT(B2:B11)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a href=""></a>=SORT(B2:B11)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="quantile-quantile-plot---step-2" class="slide level2">
@@ -425,7 +428,7 @@ Ernest Guevarra
 <p><a href="../../images/qqplot_03.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img data-src="../../images/qqplot_03.png"></a></p>
 </div><div class="column" style="width:50%;">
 <p>Calculate the actual cumulative probability by substracting <code>0.5</code> from the rank and then divided by the total number of observations.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a href=""></a>=(C2 - 0.5)/10</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a href=""></a>=(C2 - 0.5)/10</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="quantile-quantile-plot---step-3" class="slide level2">
@@ -435,7 +438,7 @@ Ernest Guevarra
 <p><a href="../../images/qqplot_05.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img data-src="../../images/qqplot_05.png"></a></p>
 </div><div class="column" style="width:40%;">
 <p>Calculate the theoretical cumulative probability using the <code>NORM.S.INV()</code> function in Excel.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a href=""></a>=NORM.S.INV(D2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a href=""></a>=NORM.S.INV(D2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Drag or copy this function down to the rest of the column.</p>
 </div></div>
 </section>
@@ -445,13 +448,13 @@ Ernest Guevarra
 <li><p>Calculate parameters for the QQ line.</p></li>
 <li><p>Calculate the 25th and 75th quantile of the continuous data.</p></li>
 </ul>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a href=""></a>=QUARTILE(B2:B11,1)    ## 25th quantile</span>
-<span id="cb8-2"><a href=""></a>=QUARTILE(B2:B11,3)    ## 75th quantile</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a href=""></a>=QUARTILE(B2:B11,1)    ## 25th quantile</span>
+<span id="cb8-2"><a href=""></a>=QUARTILE(B2:B11,3)    ## 75th quantile</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li>Calculate the theoretical 25th and 75th quantile.</li>
 </ul>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a href=""></a>=NORM.INV(0.25,0,1)    ## 25th quantile</span>
-<span id="cb9-2"><a href=""></a>=NORM.INV(0.75,0,1)    ## 75th quantile</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a href=""></a>=NORM.INV(0.25,0,1)    ## 25th quantile</span>
+<span id="cb9-2"><a href=""></a>=NORM.INV(0.75,0,1)    ## 75th quantile</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="quantile-quantile-plot---step-4-1" class="slide level2">
 <h2>Quantile-Quantile plot - Step 4</h2>
@@ -533,7 +536,7 @@ Ernest Guevarra
 <li><p>Select an appropriate divisor for your age data (6 or 12 if age is reported in months, 5 or 10 if age is reported in years)</p></li>
 <li><p>apply the <code>modulo</code> operator to divide the ages by the selected divisor. In Excel, there is the function <code>MOD()</code></p></li>
 </ul>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb10-1"><a href=""></a>=MOD(AGE,DIVISOR)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb10-1"><a href=""></a>=MOD(AGE,DIVISOR)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li>The modulo operator returns the remainder value of the result of the division performed</li>
 </ul>
@@ -545,7 +548,7 @@ Ernest Guevarra
 <li><p>Calculate the theoretical/expected number of counts per remainder if there was no age heaping</p></li>
 <li><p>Perform a chi-square test on the observed and expected values to see if there is a significant difference between the values. In Excel, use the <code>CHISQ.TEST()</code> function</p></li>
 </ul>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb11-1"><a href=""></a>=CHISQ.TEST(ACTUAL,EXPECTED)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource excel number-lines code-with-copy"><code class="sourceCode"><span id="cb11-1"><a href=""></a>=CHISQ.TEST(ACTUAL,EXPECTED)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="age-heaping---interpreting-results" class="slide level2">
 <h2>Age heaping - interpreting results</h2>
@@ -565,7 +568,7 @@ Ernest Guevarra
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="../../images/d4dm.png" class="slide-logo"></p>
+<p><img src="../../images/d4dm_neg.png" class="slide-logo"></p>
 <div class="footer footer-default">
 <p><a href="https://d4dm.org">Data for Decision Makers</a></p>
 </div>
@@ -755,7 +758,7 @@ Ernest Guevarra
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -867,13 +870,14 @@ Ernest Guevarra
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

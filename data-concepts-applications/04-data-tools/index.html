@@ -6,11 +6,11 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="index_files/libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="index_files/libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="index_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.31">
+  <meta name="generator" content="quarto-1.9.36">
 
   <meta name="author" content="Ernest Guevarra">
   <title>Data Tools</title>
@@ -20,6 +20,9 @@
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -32,7 +35,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-f563837468303362081e247dddd440d0.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-2740581606dc327e82f18f789b69d8a0.css">
   <link rel="stylesheet" href="styles.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -421,7 +424,7 @@ Ernest Guevarra
 <section id="choose-good-names-for-things" class="slide level2">
 <h2>Choose good names for things</h2>
 <ul>
-<li><p>Do not use spaces in variables names and file anmes</p></li>
+<li><p>Do not use spaces in variables names and file names</p></li>
 <li><p>Avoid special characters</p></li>
 <li><p>Short but meaningful</p></li>
 </ul>
@@ -435,21 +438,41 @@ Ernest Guevarra
 </section>
 <section id="no-empty-cell" class="slide level2 center">
 <h2>No empty cell</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="../../images/no_empty_cell.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img data-src="../../images/no_empty_cell.jpg" class="quarto-figure quarto-figure-center"></a></p>
+</figure>
+</div>
 </section>
 <section id="put-just-one-thing-in-a-cell" class="slide level2 center">
 <h2>Put just one thing in a cell</h2>
 </section>
 <section id="make-it-a-rectangle" class="slide level2 center">
 <h2>Make it a rectangle</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="../../images/non_rectangular_layout.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img data-src="../../images/non_rectangular_layout.jpg" class="quarto-figure quarto-figure-center"></a></p>
+</figure>
+</div>
 </section>
 <section id="create-a-data-dictionary" class="slide level2 center">
 <h2>Create a data dictionary</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="../../images/data_dictionary.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img data-src="../../images/data_dictionary.jpg" class="quarto-figure quarto-figure-center"></a></p>
+</figure>
+</div>
 </section>
 <section id="no-calculations-in-the-raw-data-file" class="slide level2 center">
 <h2>No calculations in the raw data file</h2>
 </section>
 <section id="do-not-use-font-colour-or-highlighting-as-data" class="slide level2 center">
 <h2>Do not use font colour or highlighting as data</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="../../images/no_color_formatting.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img data-src="../../images/no_color_formatting.jpg" class="quarto-figure quarto-figure-center"></a></p>
+</figure>
+</div>
 </section>
 <section id="make-backups" class="slide level2 center">
 <h2>Make backups</h2>
@@ -679,7 +702,7 @@ Ernest Guevarra
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="../../images/d4dm.png" class="slide-logo"></p>
+<p><img src="../../images/d4dm_neg.png" class="slide-logo"></p>
 <div class="footer footer-default">
 <p><a href="https://d4dm.org">Data for Decision Makers</a></p>
 </div>
@@ -869,7 +892,7 @@ Ernest Guevarra
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -943,13 +966,14 @@ Ernest Guevarra
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy
