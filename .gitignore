@@ -5,4 +5,6 @@
 
 /.quarto/
 
-_slides
+/_slides/
+
+**/*.quarto_ipynb

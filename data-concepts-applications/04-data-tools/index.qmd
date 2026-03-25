@@ -100,6 +100,7 @@ flowchart LR
 
 * Since every step of the data pathway used by the course participants involve Microsoft Excel, this tool has the greatest influence in the data quality of the current ecosystem of data in Seychelles
 
+
 ## The dangers of spreadsheets
 
 * The danger is real. The [European Spreadsheet Risks Interest Group](https://eusprig.org/) keeps a public archive of spreadsheet [“horror stories”](https://eusprig.org/research-info/horror-stories/){target="_blank"}.
@@ -108,15 +109,19 @@ flowchart LR
 
 * Microsoft Excel specifically converts some combination of character and numbers to dates and stores dates differently between operating systems, which can cause problems in downstream analyses.
 
+
 ## The dangers of spreadsheets
 
 * Spreadsheets are often used as a multi-purpose tool for data entry, storage, analysis, and visualisation.
 
 * Spreadsheets, by design, make humans format data to be viewed by the human eye rather than to be readable by a machine.
 
+
 ## Spreadsheets are best suited to data entry and storage {.center}
 
+
 ## Specific recommendations for organising spreadsheet data in a way that both humans and computer programs can read {.center}
+
 
 ## Be consistent
 
@@ -129,6 +134,7 @@ flowchart LR
 * Use consistent identifiers
 
 * Use consistent layout in multiple data files
+
 
 ## Be consistent
 
@@ -143,7 +149,7 @@ flowchart LR
 
 ## Choose good names for things
 
-* Do not use spaces in variables names and file anmes
+* Do not use spaces in variables names and file names
 
 * Avoid special characters
 
@@ -157,15 +163,23 @@ flowchart LR
 
 ## No empty cell {.center}
 
+![](../../images/no_empty_cell.jpg){fig-align="center"}
+
 ## Put just one thing in a cell {.center}
 
 ## Make it a rectangle {.center}
 
+![](../../images/non_rectangular_layout.jpg){fig-align="center"}
+
 ## Create a data dictionary {.center}
+
+![](../../images/data_dictionary.jpg){fig-align="center"}
 
 ## No calculations in the raw data file {.center}
 
 ## Do not use font colour or highlighting as data {.center}
+
+![](../../images/no_color_formatting.jpg){fig-align="center"}
 
 ## Make backups {.center}
 
