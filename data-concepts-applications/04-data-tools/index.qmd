@@ -189,7 +189,7 @@ We discuss validity errors specifically later in this slide deck.
 
 ## Save the data in plain text files {.center}
 
-## Other formatting issues with Excel can be found [here](https://datacarpentry.github.io/spreadsheet-ecology-lesson/02-common-mistakes){target="_blank"}
+## Other formatting issues with Excel can be found [here](https://datacarpentry.github.io/spreadsheet-ecology-lesson/02-common-mistakes){target="_blank"} {.center}
 
 ## We need to talk about data cleaning {.center}
 
