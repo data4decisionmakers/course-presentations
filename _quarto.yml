@@ -8,7 +8,7 @@ format:
     chalkboard: 
       buttons: false
     preview-links: auto
-    logo: images/d4dm.png
+    logo: images/d4dm_neg.png
     css: styles.css
     footer: "[Data for Decision Makers](https://d4dm.org)"
 
