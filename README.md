@@ -2,11 +2,10 @@
 
 <!-- badges: start -->
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![version](https://img.shields.io/badge/version-v0.1.0-orange)](https://github.com/OxfordIHTM/computer-vision-demo/releases/tag/v0.1.0)
 ![License for code](https://img.shields.io/badge/license_for_code-GPL3.0-blue)
 ![License for text](https://img.shields.io/badge/license_for_writing-CC_BY_4.0-blue)
 [![DOI](https://zenodo.org/badge/990241399.svg)](https://doi.org/10.5281/zenodo.21305170)
 <!-- badges: end -->
 
 This repository contains code and text for the Data for Decision Makers: Data Concepts and Applications course presentations.
-
-
