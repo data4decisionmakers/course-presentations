@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+authors:
+  - family-names: Guevarra
+    given-names: Ernest
+    orcid: https://orcid.org/0000-0002-4887-4415
+contact:
+  - affiliation: "University of Oxford MSc in International Health and Tropical Medicine"
+    email: ernest@guevarra.io
+    family-names: Guevarra
+    given-names: Ernest
+message: "If you use the code, text, or data in this repository, please cite it as follows:"
+title: "Data for Decision Makers: Data Concepts and Applications Course Presentations"
+repository-code: https://github.com/data4decisionmakers/course-presentations
+license: GPL-3.0-or-later
+date-released: 2025-06-06
+version: 0.1.0
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.21305170
+    
