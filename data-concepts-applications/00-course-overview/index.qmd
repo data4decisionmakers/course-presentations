@@ -1,0 +1,99 @@
+---
+title: "Data for Decision Makers: Data Concepts and Applications"
+subtitle: "Course Overview"
+output-file: course-overview.html
+title-slide-attributes: 
+  data-background-color: "#002147"
+---
+
+## About this course
+
+In this course, we will:
+
+* explore what data is and why it matters;
+
+* discuss data governance, data-driven decision-making, strategic technologies for data, and appropriate human resources for data;
+
+* learn robust and scalable data collection, storage, analysis, and visualisation skills; and,
+
+* immerse in practical examples and real-world applications to harness the power of data to drive insights, solve problems, and make informed decisions
+
+
+::: {.notes}
+
+In this course, we will explore everything from the basics such as what data is and why it matters to more advanced topics like data collection, storage, analysis, and visualisation. Through practical examples and real-world applications, you’ll learn how to harness the power of data to drive insights, solve problems, and make informed decisions in fields ranging from business and technology to healthcare and beyond. By the end of this course, you’ll not only understand the importance of data but also be prepared to apply these concepts in your own work.
+
+:::
+
+## Objectives
+
+By the end of the course, participants are expected to be able to:
+
+1. Articulate the value of data driven decision making and programming;
+
+2. Critically assess a data by it source, format, structure, types, and classes;
+
+3. Critically evaluate the state of their own dataset based on stated best practices;
+
+::: {.notes}
+
+The overall objective of the course is to making a case for shifting to more data-driven decision-making processes.
+
+Specifically, by the end of the course, participants are expected to be able to:
+
+1. Articulate the value of data driven decision making and programming;
+
+2. Critically assess a data by it source, format, structure, types, and classes;
+
+3. Critically evaluate the state of their own dataset based on stated best practices;
+
+:::
+
+## Objectives
+
+4. Outline the strengths and weaknesses of various types of data tools;
+
+5. Demonstrate capacity to use spreadsheet software to clean, process, and structure data; and,
+
+6. Demonstrate capacity to use spreadsheet software to perform data analysis.
+
+::: {.notes}
+
+4. Outline the strengths and weaknesses of various types of data tools;
+
+5. Demonstrate capacity to use spreadsheet software to clean, process, and structure data; and,
+
+6. Demonstrate capacity to use spreadsheet software to perform data analysis.
+
+:::
+
+## Course teaching modality
+
+* 10 in-person sessions starting at 09:00 and ending at 17:00.
+
+* Each session focuses on one important data concept.
+
+* The data concept will be discussed through a didactic/lecture session with generous opportunities for questions and answers during the first part of the day.
+
+* Learners will be given the opportunity to apply the data concept that they have learned in activities and real-world case studies (usually within groups) and present their outputs, findings, and learnings at the end of the day.
+
+## Course teaching modality
+
+* All relevant course materials are made available online.
+
+* Lecture slides for a specific session will be distributed via website links on the day of the session.
+
+* Reading materials on the concept of the day will be distributed electronically via a specifically-created Google Classroom for the course.
+
+* Relevant guidance for activities, other materials for group work, and case studies will be provided on the day of the activity through website links.
+
+## Course requirements
+
+* All learners are expected to be on time and to be present at all sessions.
+
+* All learners are expected to complete and submit assigned activities and tasks on the Wednesday (for activities done on Monday and Tuesday) and Friday (for activities done on the Wednesday and Thursday) of each week.
+
+* All learners are expected to complete and submit a personal course portfolio on the last Friday of the course.
+
+* All submissions are to be done online via Google Classroom.
+

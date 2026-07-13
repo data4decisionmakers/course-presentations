@@ -1,7 +1,8 @@
 ---
-title: "Session 1"
-subtitle: "Global landscape of data governance institutions and frameworks"
-# output-file: global-landscape
+title: "Global landscape of data governance institutions and frameworks"
+subtitle: "Data-driven Decision-making"
+title-slide-attributes: 
+  data-background-color: "#002147"
 ---
 
 ## Definitions {.center background-color="#002147"}
