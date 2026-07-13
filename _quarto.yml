@@ -1,6 +1,10 @@
 project:
   title: "course-presentations"
   output-dir: _slides
+  render:
+    - "*.qmd"
+    - "!LICENSE.md"
+    - "!NEWS.md"
 
 format:
   revealjs: 

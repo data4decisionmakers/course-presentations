@@ -59,12 +59,12 @@ In this approach, decisions are made by relying on facts, figures, trends patter
 
 * **Transparency** - ensure that decisions are made in an open and transparent manner; and,
 
-* **Scalabilit**y - Apply to large-scale operations or complex problems where traditional methods may be insufficient.
+* **Scalability** - Apply to large-scale operations or complex problems where traditional methods may be insufficient.
 
 ::: {.notes}
 
 * **Transparency** - ensure that decisions are made in an open and transparent manner; and,
-
+  
 * **Scalabilit**y - Apply to large-scale operations or complex problems where traditional methods may be insufficient.
 
 :::

@@ -1,14 +1,16 @@
 ---
 title: "Data for Decision Makers: Data Concepts and Applications"
 subtitle: "Course Overview"
-output-file: course-overview
+output-file: course-overview.html
+title-slide-attributes: 
+  data-background-color: "#002147"
 ---
 
 ## About this course
 
 In this course, we will:
 
-* explore what is data is and why it matters;
+* explore what data is and why it matters;
 
 * discuss data governance, data-driven decision-making, strategic technologies for data, and appropriate human resources for data;
 
@@ -67,13 +69,13 @@ Specifically, by the end of the course, participants are expected to be able to:
 
 ## Course teaching modality
 
-* The course is made up of 10 in-person sessions starting at 09:00 and ending at 17:00 with short breaks at mid-morning and mid-afternoon and a lunch break from 12:30 - 13:30.
+* 10 in-person sessions starting at 09:00 and ending at 17:00.
 
 * Each session focuses on one important data concept.
 
-* The data concept will be discussed through a didactic/lecture session with generous opportunities for quesitons and answers during the first part of the day.
+* The data concept will be discussed through a didactic/lecture session with generous opportunities for questions and answers during the first part of the day.
 
-* The second part of the day will then give learners the opportunity to apply the data concept that they have learned in activities and real-world case studies (usually within groups) and present their outputs, findings, and learnings at the end of the day.
+* Learners will be given the opportunity to apply the data concept that they have learned in activities and real-world case studies (usually within groups) and present their outputs, findings, and learnings at the end of the day.
 
 ## Course teaching modality
 
