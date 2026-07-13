@@ -96,3 +96,11 @@ Specifically, by the end of the course, participants are expected to be able to:
 
 * All submissions are to be done online via Google Classroom.
 
+## Google Classroom
+
+![](../../images/qrcode_classroom.google.com.png){fig-align="center"}
+
+## Course participant information and expectation setting
+
+![](../../images/qrcode_docs.google.com.png){fig-align="center"}
+
