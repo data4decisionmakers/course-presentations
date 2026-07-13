@@ -1,0 +1,327 @@
+---
+title: "Data-driven Decision-making"
+#subtitle: "Data-driven Decision-making"
+title-slide-attributes: 
+  data-background-color: "#002147"
+---
+
+## Background {.center}
+
+::: {.notes}
+
+In an era defined by information, the ability to make sound decisions increasingly hinges on the intelligent use of data. Across sectors and industries, from healthcare and education to finance and public policy, decision-makers are confronted with unprecedented volumes of information. Yet, it is not the sheer quantity of data that holds value, but our capacity to interpret, understand, and apply it effectively.
+
+Data is more than numbers on a spreadsheet; it is the language of modern insight. When approached with the right tools and understanding, it becomes a powerful asset for identifying patterns, predicting outcomes, evaluating strategies, and ultimately, improving results. For decision-makers, this means developing fluency not just in reading reports, but in questioning assumptions, validating sources, and interpreting results within context.
+
+Understanding modern data concepts - from statistical reasoning and data visualisation to machine learning and real-time analytics - is no longer optional. It is foundational. These concepts empower leaders to move beyond intuition and anecdote, and toward evidence-based action. As data continues to shape the world around us, the ability to engage with it critically and creatively is becoming an essential skill.
+
+This course aims to equip its participants with both the conceptual grounding and practical knowledge to navigate this landscape. Whether you are a seasoned executive, a policy analyst, or an emerging leader, this course is designed to bridge the gap between data science and decision-making. It demystifies the tools and techniques of modern data analysis and offers real-world applications that demonstrate how data can drive progress and innovation.
+
+Good decisions are not just supported by data; they are shaped by those who know how to use it wisely.
+
+:::
+
+## Data-driven decision-making
+
+* refers to the process of making decisions based on **data and information** rather than **intuition or experience** alone
+
+* involves _collecting_, _analysing_, _interpreting_, and _presenting_ data to support decision-making processes
+
+* goal is to make **objective, evidence-based decisions** that are more _accurate_, _consistent_, and _transparent_.
+
+::: {.notes}
+
+Data-driven decision-making or DDDM refers to the process of making decisions based on data and information rather than intuition or experience alone. It involves collecting, analysing, interpreting, and presenting data to support decision-making processes.
+
+In this approach, decisions are made by relying on facts, figures, trends patterns, and insights derived from data. The goal is to make objective, evidence-based decisions that are more accurate, consistent, and transparent.
+
+:::
+
+## Features of data-driven decision-making
+
+* **Informed Decisions** - make decisions based on data rather than assumptions or guesswork;
+
+* **Improved Accuracy** - reduce errors and biases by relying on objective information;
+
+* **Efficiency** - Optimise resources and processes by identifying trends, patterns, and inefficiencies;
+
+::: {.notes}
+
+* **Informed Decisions** - make decisions based on data rather than assumptions or guesswork;
+
+* **Improved Accuracy** - educe errors and biases by relying on objective information;
+
+* **Efficiency** - Optimise resources and processes by identifying trends, patterns, and inefficiencies;
+
+:::
+
+## Features of data-driven decision-making
+
+* **Transparency** - ensure that decisions are made in an open and transparent manner; and,
+
+* **Scalability** - Apply to large-scale operations or complex problems where traditional methods may be insufficient.
+
+::: {.notes}
+
+* **Transparency** - ensure that decisions are made in an open and transparent manner; and,
+  
+* **Scalability** - Apply to large-scale operations or complex problems where traditional methods may be insufficient.
+
+:::
+
+
+## What is data {.center}
+
+## All about data {.center}
+
+* Data sources
+
+* Data formats
+
+* Data types
+
+* Data structures
+
+* Data systems
+
+
+## Data source {.center}
+
+A data source is the origin of data, the location where information is stored and can be accessed for use. It can be anything from a database, a spreadsheet, a file, or even a live data feed.
+
+::: {.notes}
+
+This is a generic definition/description. Variations of this definition are usually dictated by what the data is for. For example...
+
+:::
+
+## Data source: research {.center}
+
+In research, data sources are the places where information is obtained. They can be anything from **original data** collected through _experiments_ or _surveys_ to **existing data** from _books_, _articles_, or _online databases_.
+
+## Data source: Primary vs Secondary {.center}
+
+* **Primary** - These are the original sources of information, often collected first-hand by the researcher. Examples include surveys, interviews, observations, and experiments.
+
+* **Secondary** - These are sources that are based on or derived from primary sources. They can include books, articles, reports, and online databases.
+
+## Examples of data sources {.center}
+
+Exercise: Think about your current role in relation to the data that you work on and list out **ALL** your sources of data.
+
+## Data format {.center}
+
+Data formats are **methods to encode** data that adhere to generally accepted specifications or standards.
+
+These methods to encode are standardized set of rules that determine how data is stored, organized, and transmitted.
+
+::: {.notes}
+
+Highly technical definition; key idea here is how format is an approach or method of encoding data. As such, it is more of a concept rather than a physical entity (i.e., a file). 
+
+A data format is the standardized set of rules that determine how data is stored, organized, and transmitted.
+
+:::
+
+## Data format: importance {.center}
+
+* The data format usually provides us with an indication of whether or not two sets of data are interoperable.
+
+* General rule is that data of the same format usually means they can be handled and used with the same tools and with the same techniques.
+
+* This is because they follow the same rules and methods to encode data.
+
+## Data type {.center}
+
+* Define the kind of data a variable or object can store and the operations that can be performed on it. They are fundamental building blocks in programming and data analysis. 
+
+
+* Refers to the set of data representations in use by a particular processor (usually a computer), which all compiled computer programs must use.
+
+## Data type: importance {.center}
+
+* Data type gives us an indication of what kinds of techniques and/or functions and/or operations we can apply to the data
+
+* Data types also enforce a delineation between different kinds of data that prevents two incompatible types to be grouped together
+
+## Data type: most basic/common {.center}
+
+* Numeric types
+    * integers
+    * floats
+
+* text types - strings
+
+* boolean values
+
+## Data structure {.center}
+
+Data structure is a data organisation and storage method or technique that is usually chosen for efficient access to data. More precisely, a data structure is a collection of data values, the relationships among them, and the functions or operations that can be applied to the data.
+
+## Data structure: analogy
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](../../images/oranges.jpg){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+**The 400-year old problem:**
+
+What is the best way to stack a collection of spherical objects, such as a display of oranges for sale?
+:::
+
+::::
+
+## Data structure: analogy
+
+![](../../images/orange-stack.jpeg){width=600}
+
+## Data system {.center}
+
+Data systems involve platforms that manage and store data effectively such as **databases** (relational or non-relational), **data lakes** holding large volumes, **big data systems** for massive datasets, and **business intelligence tools** for analytics.
+
+## Data system as an organising framework for {.center}
+
+* Most effective and efficient data structure for ...
+
+* Most appropriate data types required/needed ...
+
+* Formatted in a data format that is most compliant and compatible ...
+
+
+## Who, what, when, where, how, and why of data {.center}
+
+::: {.notes}
+
+The “who, what, when, where, how, and why” framework is an approach that can help you define any data that you are working on.
+
+The “who, what, when, where, how, and why” framework is a systematic approach to understanding and analysing data. Another term that can be used for this framework is descriptive metadata which is data that provides information about other data, but not the content itself. So, if I have an image, the metadata wouldn’t be the actual picture, but the details about who took it, when, or where.
+
+Here’s a structured explanation of each component within this framework:
+
+:::
+
+## Who
+
+* who owns the data;
+* who manages the data;
+* who collects the data;
+* who stores the data; and,
+* who protects/safeguards the data.
+
+::: {.notes}
+
+Refers to the individuals or entities involved with the data. This includes stakeholders, users, customers, employees, or business partners who interact with or are affected by the data. More specifically, this may include, among others, information on:
+
+who owns the data;
+who manages the data;
+who collects the data;
+who stores the data; and,
+who protects/safeguards the data.
+
+:::
+
+## What
+
+* what the data is about; 
+* type, nature, and provenance; 
+* specifies the information available, such as numerical data, text, images, etc.
+
+::: {.notes}
+
+Describes what the data is about and its type, nature, and provenance. It specifies what information is available, such as numerical data, text, images, etc., which helps in understanding the scope and relevance of the data, and how to work with the data.
+
+:::
+
+## When
+
+* timing;
+* period; and/or,
+* frequency
+
+
+::: {.notes}
+
+Pertains to the timing, period, and/or frequency in which the data was/is being collected, recorded, or analysed.
+
+:::
+
+## Where
+
+* location where the data is stored or accessed
+
+    * database;
+    * server;
+    * external sources
+
+::: {.notes}
+
+Indicates the location where the data is stored or accessed. This could be within a database, on a server, or even from external sources like devices or sensors, providing context about data accessibility and storage.
+
+:::
+
+## How
+
+Methods used to:
+
+* collect;
+* process;
+* extract
+
+
+::: {.notes}
+
+Focuses on the methods used to collect, process, or extract the data. This includes techniques such as surveys, sensor readings, or existing records, which helps in understanding how reliable and comprehensive the data is.
+
+:::
+
+## Why
+
+* purpose behind collecting and analysing the data;
+* guides appropriate actions based on the stated purpose
+
+::: {.notes}
+
+Asks for the purpose behind collecting and analysing the data. It clarifies why this information is being gathered i.e., whether it’s for reporting, decision-making, monitoring performance, or other objectives. This in turn guides appropriate actions based on the data insights.
+
+:::
+
+## Case studies {.center}
+
+::: {.notes}
+
+To achieve these objectives, the course employs the case-study method, an approach that involves in-depth examination of a specific individual, group, organisation, or event to understand a complex issue in its real-life context.
+
+For this course, the five case studies (one for each of the next five chapters) provide a more nuanced narrative of opportunities and challenges of adopting a data-driven approach to decision-making specifically in the context of governance within governments (rather than just in businesses).
+
+:::
+
+## Case Study 1: Data use and analytics in water quality management
+
+![](../../images/qrcode_case1.png){fig-align="center"}
+
+
+## Case Study 2:  Enhancing Local Governance Through Data-Driven Decision-Making in Indonesia
+
+![](../../images/qrcode_case2.png){fig-align="center"}
+
+
+## Case Study 3:  The Use of Data in Local Governance - A Michigan Perspective
+
+![](../../images/qrcode_case3.png){fig-align="center"}
+
+
+## Case Study 4: Enhancing Data-Driven Decision-Making in Local Governance - A Focus on Turkana County.
+
+![](../../images/qrcode_case4.png){fig-align="center"}
+
+
+## Case Study 5: Indigenous Data Governance in the United States
+
+![](../../images/qrcode_case5.png){fig-align="center"}
+
+## Exercise {.center}
+
+With the team members you have been grouped with, read through your team's assigned case study. Using the _who_, _what_, _when_, _where_, _how_, and _why_ framework, outline these components as with regards to your case study.
