@@ -5,6 +5,16 @@ title-slide-attributes:
   data-background-color: "#002147"
 ---
 
+```{r}
+#| label: setup
+#| echo: false
+
+## Load libraries and custom functions ----
+suppressPackageStartupMessages(source(here::here("packages.R")))
+for (f in list.files(here::here("R"), full.names = TRUE)) source (f)
+```
+
+
 ## Background {.center}
 
 ::: {.notes}
@@ -37,13 +47,17 @@ In this approach, decisions are made by relying on facts, figures, trends patter
 
 :::
 
-## Features of data-driven decision-making
+## Features of data-driven decision-making {.smaller}
 
 * **Informed Decisions** - make decisions based on data rather than assumptions or guesswork;
 
 * **Improved Accuracy** - reduce errors and biases by relying on objective information;
 
 * **Efficiency** - Optimise resources and processes by identifying trends, patterns, and inefficiencies;
+
+* **Transparency** - ensure that decisions are made in an open and transparent manner; and,
+
+* **Scalability** - Apply to large-scale operations or complex problems where traditional methods may be insufficient.
 
 ::: {.notes}
 
@@ -53,16 +67,6 @@ In this approach, decisions are made by relying on facts, figures, trends patter
 
 * **Efficiency** - Optimise resources and processes by identifying trends, patterns, and inefficiencies;
 
-:::
-
-## Features of data-driven decision-making
-
-* **Transparency** - ensure that decisions are made in an open and transparent manner; and,
-
-* **Scalability** - Apply to large-scale operations or complex problems where traditional methods may be insufficient.
-
-::: {.notes}
-
 * **Transparency** - ensure that decisions are made in an open and transparent manner; and,
   
 * **Scalability** - Apply to large-scale operations or complex problems where traditional methods may be insufficient.
@@ -71,6 +75,116 @@ In this approach, decisions are made by relying on facts, figures, trends patter
 
 
 ## What is data {.center}
+
+```{r}
+#| label: data-definition
+#| fig-cap: "Participants' responses to the question: What is data?"
+#| fig-align: center
+#| echo: false
+
+data_definitions <- read.csv(
+  file = here::here("data", "definitions_2026.csv")
+)
+
+data_definitions |>
+  dplyr::mutate(
+    themes = stringr::str_split(string = themes, pattern = "; ")
+  ) |>
+  tidyr::unnest(themes) |>
+  dplyr::pull(themes) |>
+  table() |>
+  as.data.frame() |>
+  dplyr::arrange(desc(Freq)) |>
+  stats::setNames(c("data_definition", "n")) |>
+  ggplot2::ggplot(ggplot2::aes(x = n, y = reorder(data_definition, n))) +
+  ggplot2::geom_col(fill = oxthema::get_oxford_colour("orange"), alpha = 0.8) +
+  ggplot2::geom_text(
+    ggplot2::aes(label = n),
+    hjust = -1,
+    size = 3
+  ) +
+  ggplot2::labs(y = NULL) +
+  oxthema::theme_oxford(grid = "Xx")
+```
+
+## What is data {.center}
+
+```{r}
+#| label: data-definition-primary
+#| fig-cap: "Primary data definitions inferred from participants' responses to the question: What is data?"
+#| fig-align: center
+#| echo: false
+
+data_definitions |>
+  dplyr::count(primary_theme) |>
+  dplyr::arrange(desc(n)) |>
+  ggplot2::ggplot(ggplot2::aes(x = n, y = reorder(primary_theme, n))) +
+  ggplot2::geom_col(fill = oxthema::get_oxford_colour("ochre"), alpha = 0.8) +
+  ggplot2::geom_text(
+    ggplot2::aes(label = n),
+    hjust = -1,
+    size = 3
+  ) +
+  ggplot2::labs(y = NULL) +
+  oxthema::theme_oxford(grid = "Xx")
+```
+
+## Data roles {.center}
+
+```{r}
+#| label: data-roles-any
+#| fig-cap: "Various data roles reported by participants"
+#| fig-align: center
+#| echo: false
+
+data_roles <- read.csv(
+  file = here::here("data", "data_roles_2026.csv")
+)
+
+
+data_roles |>
+  dplyr::mutate(
+    themes = stringr::str_split(string = themes, pattern = "; ")
+  ) |>
+  tidyr::unnest(themes) |>
+  dplyr::pull(themes) |>
+  table() |>
+  as.data.frame() |>
+  dplyr::arrange(desc(Freq)) |>
+  stats::setNames(c("data_role", "n")) |>
+  ggplot2::ggplot(ggplot2::aes(x = n, y = reorder(data_role, n))) +
+  ggplot2::geom_col(fill = oxthema::get_oxford_colour("mauve"), alpha = 0.8) +
+  ggplot2::geom_text(
+    ggplot2::aes(label = n),
+    hjust = -1,
+    size = 3
+  ) +
+  ggplot2::labs(y = NULL) +
+  oxthema::theme_oxford(grid = "Xx")
+```
+
+## Data roles {.center}
+
+```{r}
+#| label: data-roles-primary
+#| fig-cap: "Primary data role inferred from participants' reported data roles"
+#| fig-align: center
+#| echo: false
+
+data_roles |>
+  dplyr::count(primary_theme) |>
+  dplyr::arrange(desc(n)) |>
+  ggplot2::ggplot(ggplot2::aes(x = n, y = reorder(primary_theme, n))) +
+  ggplot2::geom_col(fill = oxthema::get_oxford_colour("ocean"), alpha = 0.8) +
+  ggplot2::geom_text(
+    ggplot2::aes(label = n),
+    hjust = -1,
+    size = 3
+  ) +
+  ggplot2::labs(y = NULL) +
+  oxthema::theme_oxford(grid = "Xx")
+```
+
 
 ## All about data {.center}
 
