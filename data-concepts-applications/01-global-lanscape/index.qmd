@@ -43,7 +43,7 @@ A system of **robust legal frameworks**, **ethical guidelines**, **standards**, 
 
 ::: {.column width="50%"}
 
-![](../images/data_governance_infographic.jpg){width="600px" fig-align="center"}
+![](../../images/data_governance_infographic.jpg){width="600px" fig-align="center"}
 
 :::
 
@@ -59,7 +59,7 @@ Getting the right data to the right people at the right time in the right format
 
 ## What is the data lifecycle? {.center}
 
-![](../images/data_lifecycle.png){fig-align="center"}
+![](../../images/data_lifecycle.png){fig-align="center"}
 
 ::: {.notes}
 
@@ -129,17 +129,6 @@ Private intent data is data collected by the private sector as part of routine b
 :::
 
 ## Activity 1: Tell me about your data {.center background-color="#002147"}
-
-## Activty 1 - Mechanics
-
-1. Move into the group assigned to you.
-
-    * TAMRI Hanoi + TAMRI Ho Chi Minh City
-    * Tam Anh Ho Chi Minh City
-    * Tam Anh Hanoi
-    * Eplus + SMART Research
-    * VNVC + Calif
-    * Department of Health (Hanoi and Ho Chi Minh City) + Department of Science and Technology Hanoi
 
 ## Activity 1 - Mechanics
 
@@ -215,7 +204,7 @@ Now, we will dig deeper into public intent data.
 
 ## Maximising value of public intent data {.center}
 
-![](../images/data_value_maximise.png){fig-align="center"}
+![](../../images/data_value_maximise.png){fig-align="center"}
 
 ::: {.notes}
 
@@ -281,7 +270,7 @@ Even though public intent data have proven highly valuable, significant gaps rem
 
 ::: {.column width="50%"}
 
-![](../images/data_gap_geospatial.png){fig-align="center"}
+![](../../images/data_gap_geospatial.png){fig-align="center"}
 
 :::
 
@@ -313,7 +302,7 @@ Lower-income countries often face significant gaps in geospatial data, particula
 
 ::: {.column width="60%"}
 
-![](../images/data_comparability_poverty.png){width="1000px" fig-align="center"}
+![](../../images/data_comparability_poverty.png){width="1000px" fig-align="center"}
 
 :::
 
@@ -415,7 +404,7 @@ Now we will focus on private intent data.
 
 ## Data in the production process {.center}
 
-![](../images/data_in_production.png){fig-align="center"}
+![](../../images/data_in_production.png){fig-align="center"}
 
 ::: {.notes}
 
@@ -427,7 +416,7 @@ Firms use data-driven technologies individually or together, with data-driven pl
 
 ## Role of data in economic activity {.center}
 
-![](../images/data_in_economic_activity.png){fig-align="center"}
+![](../../images/data_in_economic_activity.png){fig-align="center"}
 
 ::: {.notes}
 
@@ -549,7 +538,7 @@ IoT-enabled cold chain
 
 ## Risks to market structure from platform firms {.center}
 
-![](../images/data_platform_risks.png){fig-align="center"}
+![](../../images/data_platform_risks.png){fig-align="center"}
 
 ::: {.notes}
 
