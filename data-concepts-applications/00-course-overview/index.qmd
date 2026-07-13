@@ -1,7 +1,6 @@
 ---
 title: "Data for Decision Makers: Data Concepts and Applications"
 subtitle: "Course Overview"
-output-file: course-overview.html
 title-slide-attributes: 
   data-background-color: "#002147"
 ---

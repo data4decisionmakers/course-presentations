@@ -1,5 +1,5 @@
 ---
-title: "Global landscape of data governance institutions and frameworks"
+title: "Global landscape of data governance"
 subtitle: "Data-driven Decision-making"
 title-slide-attributes: 
   data-background-color: "#002147"
