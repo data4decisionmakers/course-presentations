@@ -60,3 +60,40 @@ write.csv(
   file = "data/data_roles_2026.csv",
   row.names = FALSE
 )
+
+
+## Classify expectations 2026 ----
+
+expectations_themes_2026 <- discover_expectation_themes_2026(
+  participant_info_2026$expectations
+)
+
+write.csv(
+  x = expectations_themes_2026$themes |>
+    dplyr::mutate(
+      exemplars = lapply(
+        X = exemplars, FUN = paste, collapse = "; "
+      ) |>
+        unlist()
+    ),
+  file = "data/expectations_themes_2026.csv",
+  row.names = FALSE
+)
+
+## Every run after that: code against the saved codebook ----
+expectations_2026 <- code_expectations_2026(
+  expectations = participant_info_2026$expectations,
+  themes = read.csv("data/expectations_themes_2026.csv")
+) |>
+  dplyr::mutate(
+    themes = lapply(
+      X = themes, FUN = paste, collapse = "; "
+    ) |>
+      unlist()
+  )
+
+write.csv(
+  x = expectations_2026,
+  file = "data/expectations_2026.csv",
+  row.names = FALSE
+)
