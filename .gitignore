@@ -8,3 +8,6 @@
 /_slides/
 
 **/*.quarto_ipynb
+
+/data/
+!/data/.gitkeep
