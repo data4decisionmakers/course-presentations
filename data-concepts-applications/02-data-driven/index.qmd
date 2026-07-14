@@ -219,10 +219,6 @@ In research, data sources are the places where information is obtained. They can
 
 * **Secondary** - These are sources that are based on or derived from primary sources. They can include books, articles, reports, and online databases.
 
-## Examples of data sources {.center}
-
-Exercise: Think about your current role in relation to the data that you work on and list out **ALL** your sources of data.
-
 ## Data format {.center}
 
 Data formats are **methods to encode** data that adhere to generally accepted specifications or standards.
