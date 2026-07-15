@@ -1,0 +1,65 @@
+---
+title: "Global landscape of available technologies for data"
+subtitle: "Data-driven Decision-making"
+title-slide-attributes: 
+  data-background-color: "#002147"
+---
+
+## {.center}
+
+![](../../images/tech_landscape_01.png){fig-align="center"}
+
+## Number of data tools and technologies {.center}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* In 2012, there were about **139** apps/tools/platforms relevant to data.
+
+* In 2023, there were about **1416**.
+
+* By 2024, this number increased to **2000+**.
+
+:::
+
+::: {.column width="50%"}
+
+![](../../images/tech_landscape_01.png){fig-align="center"}
+
+:::
+
+::::
+
+## Technologies and methods that support data-driven decision-making
+
+* Technology that supports data-intensive analytics: artificial intelligence, including machine learning
+
+* Technology that collects data and actions insights from analytics: smart devices and devices connected through the Internet of Things (IoT)
+
+* Technology that creates transparency and trust in data records: distributed ledger technology, including blockchain
+
+## Platform firms in low and middle-income countries {.center}
+
+![](../../images/data_platform_firms.png){fig-align="center"}
+
+## Domestic vs Foreign-based firms {.center}
+
+![](../../images/data_foreign_domestic_firms.png){fig-align="center"}
+
+## Users spend more time on Facebook, Google, and YouTube {.center}
+
+![](../../images/data_website_visits.png){fig-align="center"}
+
+## Internet traffic in low and middle income countries {.center}
+
+![](../../images/data_global_internet_share.png){fig-align="center"}
+
+## Data lifecycle {.center}
+
+![](../../images/data_lifecycle.png){fig-align="center"}
+
+## Data technology landscape {.center}
+
+![](../../images/tech_landscape_02.png){fig-align="center"}
+
