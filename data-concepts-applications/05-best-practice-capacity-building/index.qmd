@@ -9,7 +9,7 @@ title-slide-attributes:
 
 * Not everyone needs to be a data scientist.
 
-* Data capacities in policymaking refer to how well infrastructure, systems, and people can use data effectively for decisions.
+* Data capacities in data-driven decision-making refer to how well infrastructure, systems, and people can use data effectively for decisions.
 
 * Strengthening these abilities across different teams is essential.
 
@@ -20,17 +20,17 @@ title-slide-attributes:
 
 ## Types of skills {.center}
 
-![](../images/hr_roles_03.svg){fig-align="center"}
+![](../../images/hr_roles_03.svg){fig-align="center"}
 
 ## Data Capability Framework {.center}
 
-![](../images/hr_roles_04.png){fig-align="center"}
+![](../../images/hr_roles_04.png){fig-align="center"}
 
 ## Data Capability Framework - example {.smaller}
 
 * **Capability:** Employ data coding and classification principles
 
-* **Catgory:** Describe, Store, Use, and Save/Destroy
+* **Category:** Describe, Store, Use, and Save/Destroy
 
 :::: {.columns}
 
@@ -66,13 +66,13 @@ title-slide-attributes:
 
 ## Data Capability Framework Guide {.center}
 
-![](../images/qrcode_data.govt.nz.png){fig-align="center"}
+![](../../images/qrcode_data.govt.nz.png){fig-align="center"}
 
 [Link](https://data.govt.nz/toolkit/data-capability-framework/data-capability-framework-guide)
 
 ## Data Maturity Assessment Framework {.center}
 
-![](../images/hr_roles_05.png){fig-align="center"}
+![](../../images/hr_roles_05.png){fig-align="center"}
 
 ## Data Maturity Assessment Framework
 
@@ -82,7 +82,7 @@ title-slide-attributes:
 
 ## Data Maturity Assessment Framework - example {.center}
 
-![](../images/dma_example.png){fig-align="center"}
+![](../../images/dma_example.png){fig-align="center"}
 
 ## Data Maturity Assessment Framework Guide {.center}
 
@@ -94,11 +94,11 @@ title-slide-attributes:
 
 ## Data Literacy {.center}
 
-![](../images/hr_roles_06.png){fig-align="center"}
+![](../../images/hr_roles_06.png){fig-align="center"}
 
 ## Data Skills Framework {.center}
 
-![](../images/hr_roles_07.png){fig-align="center"}
+![](../../images/hr_roles_07.png){fig-align="center"}
 
 ## 3. Operationalise data capacity building {.center background-color="#002147"}
 
