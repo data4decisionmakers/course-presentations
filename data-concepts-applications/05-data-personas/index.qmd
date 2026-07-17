@@ -1,0 +1,47 @@
+---
+title: "Data Personas"
+subtitle: "Data-driven Decision-making"
+title-slide-attributes: 
+  data-background-color: "#002147"
+---
+
+## Chantal {.center background-image="../../images/persona_data_01.png" background-size="cover" background-repeat="no-repeat" background-position="center"}
+
+## {.center .smaller}
+
+* AquaVolt Wakanda, the country’s oldest and largest private water and electricity utility, is still operating with legacy, manual processes that no longer match customer expectations.
+* Newly appointed Director of Innovations Chantal has been asked to deliver visible modernization within 12 months, without disrupting service continuity.
+* Key operational issues include manual meter reading, billing errors, delayed issue resolution, and outdated rules for planning new water and electrical line installations.
+* The company needs a more data-driven model for field operations, resource allocation, and leadership reporting to improve efficiency and decision-making.
+* Success will be measured by better billing accuracy, improved customer experience, faster field operations, and a credible foundation for future transformation.
+
+## Jean Paul {.center background-image="../../images/persona_data_02.png" background-size="cover" background-repeat="no-repeat" background-position="center"}
+
+## {.center .smaller}
+
+* Jean Paul leads the **AeroHealth Evidence Lab** at Caledonia University, focusing on air quality research in the Department of Health and Environment.
+* Over five years, his team has built a strong dataset using air quality sensors, traffic patterns, land use, and industrial location data.
+* Jean Paul now wants to expand the research by linking environmental exposure data with health and health outcome datasets held by departmental colleagues.
+* The main challenge is designing a secure, ethical, and methodologically sound research strategy for combining datasets across disciplines.
+* Success would mean a scalable research program that produces evidence on how poor air quality affects health and supports policy and public health action.
+
+## Marie {.center background-image="../../images/persona_data_03.png" background-size="cover" background-repeat="no-repeat" background-position="center"}
+
+## {.center .smaller}
+
+* Marie leads the **Poverty Alleviation Unit** after 30 years as a government social worker, and she wants to modernize how the unit serves vulnerable families.
+* The unit has complete historical case records, but they are all paper-based, making it hard to search, analyze, and use the information strategically.
+* Marie wants to turn those records into useful data to better understand client needs, identify trends, and improve welfare planning.
+* A major challenge is that many staff are older, experienced, and cautious about moving from paper-based case work to digital systems.
+* Success would mean a phased transition to digital case management that improves insight, efficiency, confidentiality, and service quality without disrupting frontline support.
+
+## Alain {.center background-image="../../images/persona_data_04.png" background-size="cover" background-repeat="no-repeat" background-position="center"}
+
+## {.center .smaller}
+
+* Alain leads **Resilient Futures Alliance**, an NGO that supports families affected by natural disasters and captures detailed case data through a mobile field app.
+* The organisation’s data is strong and consistent, recording household needs, assistance delivered, referrals, and follow-up across disaster responses.
+* Alain wants to share this data with government departments so it can support broader analytics, coordination, and future disaster planning.
+* The main challenge is building a secure, ethical, and practical data-sharing model that protects privacy, preserves trust, and works across multiple agencies.
+* Success would mean a repeatable partnership framework that enables shared insights, better preparedness, and more coordinated disaster response and recovery.
+
