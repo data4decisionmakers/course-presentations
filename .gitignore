@@ -10,3 +10,7 @@
 **/*.quarto_ipynb
 
 /data/d4dm_participant_information_2026.csv
+
+/pdf/
+
+_render_pdf.R
