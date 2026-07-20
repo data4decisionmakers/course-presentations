@@ -256,4 +256,5 @@ File organisation and naming are powerful weapons against chaos.
 
 ## Exercise {.center background-color="#002147"}
 
-Within the project and the corresponding datasets provided within, create a project-based structure for these files and organise them based on what we have discussed.
+For the given directory of current files related to this course, create a project-based structure for these files and organise them based on what we have discussed.
+
