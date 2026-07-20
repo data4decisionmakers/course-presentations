@@ -1,5 +1,4 @@
 ---
----
 title: "All about spreadsheets"
 subtitle: "Data-driven Decision-making"
 title-slide-attributes: 
@@ -8,7 +7,7 @@ lightbox: true
 fig-cap-location: top
 ---
 
-## "The best tool is the one you have" {.center}
+## "The best tool is the one you have" {.center background-color="#002147"}
 
 ## Data entry
 
@@ -111,7 +110,7 @@ flowchart LR
 ## Specific recommendations for organising spreadsheet data in a way that both humans and computer programs can read {.center}
 
 
-## Be consistent
+## 1. Be consistent
 
 * Use consistent codes for categorical variables
 
@@ -124,7 +123,7 @@ flowchart LR
 * Use consistent layout in multiple data files
 
 
-## Be consistent
+## 1. Be consistent
 
 * Use consistent file names
 
@@ -135,7 +134,7 @@ flowchart LR
 * Be careful about extra spaces in cells
 
 
-## Choose good names for things
+## 2. Choose good names for things
 
 * Do not use spaces in variables names and file names
 
@@ -143,39 +142,43 @@ flowchart LR
 
 * Short but meaningful
 
-## Write dates as YYYY-MM-DD
+## 3. Write dates as YYYY-MM-DD
 
 * recommend using the global “ISO 8601” standard, YYYY-MM-DD
 
 * Microsoft Excel’s treatment of dates can cause problems in data. It stores them internally as a number, with different conventions on Windows and Macs. So, you may need to manually check the integrity of your data when they come out of Excel.
 
-## No empty cell {.center}
+## 4. No empty cell {.center}
 
 ![](../../images/no_empty_cell.jpg){fig-align="center"}
 
-## Put just one thing in a cell {.center}
+## 5. Put just one thing in a cell {.center}
 
-## Make it a rectangle {.center}
+* The cells in your spreadsheet should each contain one piece of data.
+
+* Do not put more than one thing in a cell.
+
+## 6. Make it a rectangle {.center}
 
 ![](../../images/non_rectangular_layout.jpg){fig-align="center"}
 
-## Create a data dictionary {.center}
+## 7. Create a data dictionary {.center}
 
 ![](../../images/data_dictionary.jpg){fig-align="center"}
 
-## No calculations in the raw data file {.center}
+## 8. No calculations in the raw data file {.center}
 
-## Do not use font colour or highlighting as data {.center}
+## 9. Do not use font colour or highlighting as data {.center}
 
 ![](../../images/no_color_formatting.jpg){fig-align="center"}
 
-## Make backups {.center}
+## 10. Make backups {.center}
 
-## Use data validation to avoid errors {.center}
+## 11. Use data validation to avoid errors {.center}
 
 We discuss validity errors specifically later in this slide deck.
 
-## Save the data in plain text files {.center}
+## 12. Save the data in plain text files {.center}
 
 ## Other formatting issues with Excel can be found [here](https://datacarpentry.github.io/spreadsheet-ecology-lesson/02-common-mistakes){target="_blank"} {.center}
 
