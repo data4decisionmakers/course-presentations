@@ -310,6 +310,14 @@ Mary Johnson | b         | 1
 
 * A single observational unit is stored in multiple tables.
 
+## Column headers are values not variable names
+
+![](../../images/spreadsheet01.png){fig-align="center"}
+
+## Multiple variables are stored in one column
+
+![](../../images/spreadsheet02.png){fig-align="center"}
+
 ## Tidy data is extremely compatible with relational databases and data collection tools that adhere to relational database standards {.center}
 
 ## Messy data is commonly a result of the use of data tools that do not have standards or set rules for data structure i.e., Microsoft Excel {.center}
