@@ -10,7 +10,7 @@ engine: knitr
 
 ## On scatter plots{.center}
 
-> Scatter plots are glorious. Of all the major chart types, they are by far the most powerful. They allow us to quickly understand relationships] that would be nearly impossible to recognize in a table or a different type of chart. … Michael Friendly and Daniel Denis, psychologists and historians of graphics, call the scatter plot the most “generally useful invention in the history of statistical graphics.”    
+> Scatter plots are glorious. Of all the major chart types, they are by far the most powerful. They allow us to quickly understand relationships that would be nearly impossible to recognize in a table or a different type of chart. … Michael Friendly and Daniel Denis, psychologists and historians of graphics, call the scatter plot the most “generally useful invention in the history of statistical graphics.”    
 
 [Dan Kopf](https://qz.com/1235712/the-origins-of-the-scatter-plot-data-visualizations-greatest-invention)
 
@@ -35,9 +35,9 @@ We will use the `cyclones` dataset for learning and creating scatter plots.
 
 ## Numerical measures of association
 
-* Correlation - Spearman's rank correlation (Spearman's rho)
+* Correlation - Spearman's rank correlation or Spearman's rho ($\rho$)
 
-* Correlation - Kendall's tau correlaetion
+* Correlation - Kendall's tau ($\tau$) correlation
 
 
 ## Spearman's Rank Correlation
@@ -80,17 +80,13 @@ $$ \rho ~ = ~ 1 - \frac{6 \sum d ^ 2}{n(n ^ 2 -1)} $$
 
 * Count all the discordant and concordant pairs
 
-* Calculate tau coefficient
+* Calculate tau ($\tau$) coefficient
 
 $$ \tau ~ = ~ \frac{n_{concordant} - n_{discordant}}{\frac{n(n-1)}{2}}   $$
 
-## Kenall's Rank Correlation - interpretation
+## Kendall's Rank Correlation - interpretation
 
 * Kendall's tau ranges from -1 to +1
 
 * Interpretation is similar to Pearson's correlation
-
-
-
-
 
