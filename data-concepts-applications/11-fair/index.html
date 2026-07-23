@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/tabby.min.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="index_files/libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="index_files/libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="index_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.38">
+
+  <meta name="author" content="Ernest Guevarra">
+  <title>The FAIR Principles</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-2740581606dc327e82f18f789b69d8a0.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-color="#002147" class="quarto-title-block center">
+  <h1 class="title">The FAIR Principles</h1>
+  <p class="subtitle">Data-driven Decision-making</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Ernest Guevarra 
+</div>
+<div class="quarto-title-author-email">
+<a href="mailto:ernest@d4dm.org">ernest@d4dm.org</a>
+</div>
+        <p class="quarto-title-affiliation">
+            University of Oxford
+          </p>
+    </div>
+</div>
+
+</section>
+<section id="where-we-have-been" class="slide level2 center">
+<h2>Where we have been</h2>
+<ul>
+<li><p>Across this course we have learned to <strong>collect</strong>, <strong>structure</strong>, <strong>clean</strong>, <strong>store</strong>, <strong>analyse</strong>, and <strong>govern</strong> data.</p></li>
+<li><p>For all of that effort to pay off, our data must be able to <strong>outlive the moment it was created</strong> so that it can be found, understood, and reused by others (and by our future selves).</p></li>
+</ul>
+<aside class="notes">
+<p>This is the final session of the course. Frame FAIR as the natural conclusion of everything that came before. Every good habit we have built — tidy data, data dictionaries, consistent naming, plain-text storage, backups, data governance — is in service of data that can be trusted and reused. FAIR gives us a shared vocabulary and a checklist for that goal.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="outline" class="slide level2">
+<h2>Outline</h2>
+<ol type="1">
+<li><p>Why data reuse matters</p></li>
+<li><p>What FAIR means</p></li>
+<li><p><strong>F</strong>indable, <strong>A</strong>ccessible, <strong>I</strong>nteroperable, <strong>R</strong>eusable</p></li>
+<li><p>FAIR is not the same as Open</p></li>
+<li><p>Making your own data more FAIR</p></li>
+<li><p>FAIR in the context of this course</p></li>
+</ol>
+</section>
+<section id="why-does-this-matter" class="slide level2">
+<h2>Why does this matter?</h2>
+<ul>
+<li><p>Most data is collected once, used once, and then <strong>lost</strong> either on a laptop, in an email attachment, in a folder no one can find.</p></li>
+<li><p>Decision makers repeatedly re-collect data that already exists because they cannot <strong>find</strong>, <strong>access</strong>, or <strong>understand</strong> what was gathered before.</p></li>
+<li><p>Data that cannot be reused is a wasted investment.</p></li>
+</ul>
+<aside class="notes">
+<p>Ask the group: how many datasets have you collected that you could not locate or re-open a year later? How many times has your organisation paid to collect something that likely already existed somewhere? This is the everyday cost of non-FAIR data.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-goal-reuse-by-humans-and-machines" class="slide level2 center">
+<h2>The goal: reuse by humans <strong>and</strong> machines</h2>
+<ul>
+<li><p>The volume of data is growing far faster than any team of people can read, catalogue, and connect by hand.</p></li>
+<li><p>The FAIR principles were written so that <strong>computers</strong> can help us find and combine data with as little human effort as possible.</p></li>
+</ul>
+<aside class="notes">
+<p>A key and often missed point: FAIR is explicitly about machine-actionability. Humans have always been able to muddle through with poorly organised data. The scale of modern data means we increasingly need machines to do the finding and linking for us, and machines are far less forgiving of inconsistency than humans are. This is exactly why the tidy-data and consistent-naming habits from earlier in the course matter.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-is-fair" class="slide level2">
+<h2>What is FAIR?</h2>
+<ul>
+<li><p>A set of guiding principles published in <strong>2016</strong> by a broad group of researchers, publishers, and funders (Wilkinson <em>et al.</em>, <em>Scientific Data</em>).</p></li>
+<li><p>Now stewarded by the <strong>GO FAIR</strong> initiative.</p></li>
+<li><p>FAIR describes four qualities that make data a lasting, reusable asset:</p></li>
+</ul>
+<aside class="notes">
+<p>The foundational reference is Wilkinson MD, et al.&nbsp;(2016) “The FAIR Guiding Principles for scientific data management and stewardship”, Scientific Data 3:160018. GO FAIR (go-fair.org) is the international body that maintains and promotes the principles today. FAIR started in the research world but has been widely adopted across government, health, and the private sector.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="fair" class="slide level2 center">
+<h2>FAIR</h2>
+<ul>
+<li><p><strong>F</strong>indable</p></li>
+<li><p><strong>A</strong>ccessible</p></li>
+<li><p><strong>I</strong>nteroperable</p></li>
+<li><p><strong>R</strong>eusable</p></li>
+</ul>
+<aside class="notes">
+<p>Walk through the acronym at a high level before going deep. A one-line gloss for each: Findable = can someone (or something) locate it? Accessible = once found, can they retrieve it? Interoperable = does it speak a common language so it can be combined with other data? Reusable = is it described well enough to be trusted and used again? Then we take each in turn.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="fair-at-a-glance" class="slide level2 center">
+<h2>FAIR at a glance</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="../../images/fair_data_principles.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="../../images/fair_data_principles.jpg" class="quarto-figure quarto-figure-center"></a></p>
+</figure>
+</div>
+
+<aside class="notes">
+<p>Alternative overview slide (option 2 of 2). This is the widely recognised FAIR icon set: magnifying glass (Findable), pointing hand (Accessible), interlocking gears (Interoperable), recycling symbol (Reusable). Cleaner and more memorable than the diagram, but conveys less structure. The attribution is required under the CC BY-SA licence — keep the citation line if you use this slide. Choose this or the mermaid diagram on the previous slide.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside><div>
+<p>Infographic by SangyaPundir, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank">CC BY-SA 4.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:FAIR_data_principles.jpg" target="_blank">Wikimedia Commons</a>.</p>
+</div></aside></section>
+<section id="the-unsung-hero-metadata" class="slide level2 center">
+<h2>The unsung hero: metadata</h2>
+<ul>
+<li><p><strong>Metadata</strong> is data <em>about</em> data — the who, what, when, where, why, and how of a dataset.</p></li>
+<li><p>Notice that most of the FAIR principles refer to <strong>(meta)data</strong>. Good metadata is what makes data findable, understandable, and reusable.</p></li>
+</ul>
+<aside class="notes">
+<p>Emphasise this early because it recurs throughout. The notation “(meta)data” in the principles means “metadata and, where relevant, the data itself”. A dataset can remain valuable long after the raw data is gone, purely because its metadata survives. The data dictionary we built earlier in the course is a concrete, familiar example of metadata.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section>
+<section id="findable" class="title-slide slide level1 center" data-background-color="#002147">
+<h1>Findable</h1>
+
+</section>
+<section id="findable-1" class="slide level2">
+<h2>Findable</h2>
+<p><em>If you cannot find it, nothing else matters.</em></p>
+<p><strong>F1.</strong> (Meta)data are assigned a globally unique and persistent identifier.</p>
+<p><strong>F2.</strong> Data are described with rich metadata.</p>
+<p><strong>F3.</strong> Metadata clearly and explicitly include the identifier of the data they describe.</p>
+<p><strong>F4.</strong> (Meta)data are registered or indexed in a searchable resource.</p>
+<aside class="notes">
+<p>Findability is the entry point. A globally unique and persistent identifier (like a DOI) is one that will not change and will not be reused for something else — unlike a file path or a link that breaks when a folder is reorganised. Rich metadata (F2) is what lets search engines and catalogues surface the right dataset. F3 makes sure the metadata record actually points back to the data it describes. F4 means the dataset lives somewhere it can be searched — a catalogue, registry, or repository — not buried on a personal drive.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="findable-in-plain-terms" class="slide level2">
+<h2>Findable in plain terms</h2>
+<ul>
+<li><p>Give every dataset a <strong>permanent, unique name or identifier</strong> (e.g.&nbsp;a DOI).</p></li>
+<li><p>Describe it richly: title, authors, date, geography, variables, methods.</p></li>
+<li><p>Put it somewhere <strong>searchable</strong> such as a data catalogue or repository, not a personal folder.</p></li>
+</ul>
+<aside class="notes">
+<p>Translate the formal principles into actions your audience can take. A DOI (Digital Object Identifier) is the most common persistent identifier for datasets; services like Zenodo or Figshare will mint one for free. The richer the metadata, the more likely someone finds the data when they need it.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="accessible" class="title-slide slide level1 center" data-background-color="#002147">
+<h1>Accessible</h1>
+
+</section>
+<section id="accessible-1" class="slide level2">
+<h2>Accessible</h2>
+<p><em>Once found, how do you get it?</em></p>
+<p><strong>A1.</strong> (Meta)data are retrievable by their identifier using a standardised communications protocol.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>A1.1.</strong> The protocol is open, free, and universally implementable.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>A1.2.</strong> The protocol allows for authentication and authorisation, where necessary.</p>
+<p><strong>A2.</strong> Metadata are accessible, even when the data are no longer available.</p>
+<aside class="notes">
+<p>Accessible does NOT mean “open to everyone” — this is the most common misconception. It means that the rules for access are clear and can be acted upon. A standardised protocol (like HTTP) means anyone with a standard tool can retrieve the data. A1.1 favours open, free protocols so no one is locked out by proprietary software. A1.2 explicitly allows for login, permissions, and consent procedures — essential for sensitive or personal data, which we covered in the data protection and governance sessions. A2 is powerful: even if the data itself is deleted or restricted, the metadata (the record that it existed, and how to request it) should live on.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="accessible-in-plain-terms" class="slide level2">
+<h2>Accessible in plain terms</h2>
+<ul>
+<li><p>Use <strong>standard, open ways</strong> to retrieve data (a web link that works, not “email me for the file”).</p></li>
+<li><p>Where data is sensitive, provide a <strong>clear, documented process</strong> for requesting access.</p></li>
+<li><p>Keep the <strong>metadata alive</strong> even if the data is retired or restricted.</p></li>
+</ul>
+<aside class="notes">
+<p>Reinforce that access controls and FAIR are fully compatible. A dataset behind an authentication step is still FAIR if the process is clear and standardised. This connects directly to the data protection principles: personal and sensitive data can be FAIR and still be responsibly restricted.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="interoperable" class="title-slide slide level1 center" data-background-color="#002147">
+<h1>Interoperable</h1>
+
+</section>
+<section id="interoperable-1" class="slide level2">
+<h2>Interoperable</h2>
+<p><em>Can it be combined with other data?</em></p>
+<p><strong>I1.</strong> (Meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation.</p>
+<p><strong>I2.</strong> (Meta)data use vocabularies that follow FAIR principles.</p>
+<p><strong>I3.</strong> (Meta)data include qualified references to other (meta)data.</p>
+<aside class="notes">
+<p>Interoperability is about data being able to “talk to” other data and systems without a human manually reconciling everything. I1: use common, well-defined formats and languages rather than idiosyncratic ones. I2: use shared, standard vocabularies — for example, an agreed list of country codes, disease codes (ICD), or units — so that “F”, “female”, and “Female” don’t fragment your data. I3: link your data to related data with meaningful, described relationships (this record is derived from that one; this variable is defined in that standard).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="interoperable-in-plain-terms" class="slide level2">
+<h2>Interoperable in plain terms</h2>
+<ul>
+<li><p>Save data in <strong>open, common formats</strong> (CSV, not a proprietary binary).</p></li>
+<li><p>Use <strong>agreed vocabularies and codes</strong> such as standard country codes, units, category labels.</p></li>
+<li><p><strong>Link</strong> related datasets and definitions explicitly.</p></li>
+</ul>
+<aside class="notes">
+<p>This is where the earlier lessons pay off directly. “Be consistent”, “put one thing in a cell”, “save as plain text”, and building a data dictionary are all interoperability practices. Standard vocabularies are the difference between five spellings of the same category and one machine-readable code.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="this-should-sound-familiar" class="slide level2 center">
+<h2>This should sound familiar</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>From our spreadsheets session</strong></p>
+<ul>
+<li><p>Be consistent</p></li>
+<li><p>One thing per cell</p></li>
+<li><p>Dates as <code>YYYY-MM-DD</code></p></li>
+<li><p>Save as plain text</p></li>
+<li><p>Create a data dictionary</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>FAIR equivalent</strong></p>
+<ul>
+<li><p>Interoperable vocabularies (I2)</p></li>
+<li><p>Machine-readable data</p></li>
+<li><p>Shared standard (ISO 8601)</p></li>
+<li><p>Open format (A1.1, I1)</p></li>
+<li><p>Rich metadata (F2, R1)</p></li>
+</ul>
+</div></div>
+<aside class="notes">
+<p>Make the through-line explicit. The tidy-data and good-spreadsheet habits we practised were not arbitrary rules — they are the ground-level, practical implementation of FAIR. Learners have already been doing FAIR without the label.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="reusable" class="title-slide slide level1 center" data-background-color="#002147">
+<h1>Reusable</h1>
+
+</section>
+<section id="reusable-1" class="slide level2">
+<h2>Reusable</h2>
+<p><em>The ultimate goal — can it be trusted and used again?</em></p>
+<p><strong>R1.</strong> (Meta)data are richly described with a plurality of accurate and relevant attributes.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>R1.1.</strong> (Meta)data are released with a clear and accessible data usage licence.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>R1.2.</strong> (Meta)data are associated with detailed provenance.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>R1.3.</strong> (Meta)data meet domain-relevant community standards.</p>
+<aside class="notes">
+<p>Reusability is the whole point — the first three qualities exist to serve it. R1: describe the data richly enough that someone else can judge whether it fits their purpose. R1.1: a licence tells people what they are legally allowed to do with the data; without one, cautious users assume they can do nothing. R1.2: provenance is the data’s origin story — where it came from, how it was processed, by whom — which is the basis of trust. R1.3: following the standards your field already uses means your data slots straight into existing workflows.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="reusable-in-plain-terms" class="slide level2">
+<h2>Reusable in plain terms</h2>
+<ul>
+<li><p>Document <strong>how, when, why, and by whom</strong> the data was produced (provenance).</p></li>
+<li><p>Attach a <strong>clear licence</strong> so others know what they may do with it.</p></li>
+<li><p>Follow the <strong>standards of your sector</strong> so the data fits existing workflows.</p></li>
+</ul>
+<aside class="notes">
+<p>Provenance connects back to the data workflow and governance sessions: version control, documented processing steps, and clear ownership all feed reusability. A licence is not a bureaucratic afterthought — without one, well-meaning users are legally stuck.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="fair-is-not-the-same-as-open" class="title-slide slide level1 center" data-background-color="#002147">
+<h1>FAIR is not the same as Open</h1>
+
+</section>
+<section id="fair-is-not-the-same-as-open-1" class="slide level2">
+<h2>FAIR is not the same as Open</h2>
+<ul>
+<li><p><strong>Open data</strong> = free for anyone to use, with no or minimal restriction.</p></li>
+<li><p><strong>FAIR data</strong> = well-described, well-managed, and reusable <em>under clearly stated conditions</em> which may include restrictions.</p></li>
+</ul>
+<div class="callout callout-note callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<p>Data can be <strong>FAIR without being fully open</strong>. Sensitive health, financial, or personal data can and should be FAIR while remaining protected.</p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>This is worth dwelling on for a decision-making audience. Much of the data you work with is personal or sensitive and cannot be made openly available — and FAIR does not ask you to. FAIR asks that the data be findable, that access rules be clear, that formats be standard, and that reuse conditions be documented. The GO FAIR slogan is “as open as possible, as closed as necessary.” This resolves the apparent tension with the data protection principles we covered earlier.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="as-open-as-possible-as-closed-as-necessary" class="slide level2 center">
+<h2>As open as possible, as closed as necessary</h2>
+<aside class="notes">
+<p>Leave this on screen as the memorable one-line summary of the FAIR-vs-Open distinction. It captures the balance decision makers must strike between transparency and protection.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="making-your-data-more-fair" class="title-slide slide level1 center" data-background-color="#002147">
+<h1>Making your data more FAIR</h1>
+
+</section>
+<section id="a-practical-starting-checklist" class="slide level2">
+<h2>A practical starting checklist</h2>
+<ol type="1">
+<li><p><strong>Name it uniquely</strong> , e.g., a persistent identifier, not just a filename.</p></li>
+<li><p><strong>Describe it</strong> with rich metadata and a data dictionary.</p></li>
+<li><p><strong>Store it somewhere searchable</strong> such as a catalogue or repository.</p></li>
+<li><p><strong>Use open formats and standard codes</strong> such as CSV, ISO dates, agreed vocabularies.</p></li>
+<li><p><strong>State the access rules</strong> such as who can use it and how.</p></li>
+<li><p><strong>Add a licence and record its provenance.</strong></p></li>
+</ol>
+<aside class="notes">
+<p>Frame this as a checklist learners can apply to their own next dataset. It is deliberately practical and low-cost — most items require good habits rather than new budget. Point out that they already have the skills for most of these from earlier sessions.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="fair-is-a-spectrum-not-a-badge" class="slide level2">
+<h2>FAIR is a spectrum, not a badge</h2>
+<ul>
+<li><p>FAIR is not pass/fail; datasets are <strong>more or less</strong> FAIR.</p></li>
+<li><p>You do not need to do everything at once. <strong>Any</strong> improvement makes data more reusable.</p></li>
+<li><p>Start with the cheapest, highest-impact steps: <strong>good metadata</strong> and <strong>consistent, open formats</strong>.</p></li>
+</ul>
+<aside class="notes">
+<p>Relieve any sense that FAIR is an all-or-nothing burden. Progress is incremental and cumulative. Even adding a README and a data dictionary to an existing folder measurably improves findability and reusability. The goal is direction of travel, not perfection.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="fair-strengthens-data-governance" class="slide level2 center">
+<h2>FAIR strengthens data governance</h2>
+<ul>
+<li><p>FAIR is the <strong>practical, dataset-level expression</strong> of the data governance principles we discussed:</p></li>
+<li><p>accountability, documentation, clear access rules, and long-term stewardship applied to every dataset you hold.</p></li>
+</ul>
+<aside class="notes">
+<p>Tie FAIR back to the data governance session. Governance sets the organisational policy; FAIR is what “good” looks like at the level of an individual dataset. An organisation with strong governance but non-FAIR datasets has policy without practice.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="summary" class="slide level2">
+<h2>Summary</h2>
+<ul>
+<li><p>FAIR = <strong>F</strong>indable, <strong>A</strong>ccessible, <strong>I</strong>nteroperable, <strong>R</strong>eusable.</p></li>
+<li><p>It exists so data can be reused by <strong>humans and machines</strong>, long after collection.</p></li>
+<li><p><strong>Metadata</strong> is what carries most of the FAIR qualities.</p></li>
+<li><p>FAIR is <strong>not</strong> the same as Open — sensitive data can be FAIR and protected.</p></li>
+<li><p>Almost everything in this course — tidy data, dictionaries, consistent naming, governance — has been building toward FAIR.</p></li>
+</ul>
+<aside class="notes">
+<p>Close the loop on the whole course. FAIR is a fitting final topic because it names and unifies the purpose behind every practical habit we have built. Leave learners with the sense that they now have both the skills and the framework to make their organisation’s data a lasting asset.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exercise" class="slide level2 center">
+<h2>Exercise</h2>
+<p>Take <strong>one dataset</strong> your team currently holds. Score it against the FAIR checklist:</p>
+<p>which principles does it already meet, and what are the <strong>two cheapest changes</strong> that would make it more FAIR?</p>
+<aside class="notes">
+<p>A concrete closing activity. In small groups, have learners pick a real dataset, walk it through the six-step checklist, and identify two low-cost, high-impact improvements. Share back to the room. This turns FAIR from an abstract principle into an action plan they leave the course with.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="../../images/d4dm_neg.png" class="slide-logo"></p>
+<div class="footer footer-default">
+<p><a href="https://d4dm.org">Data for Decision Makers</a></p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="index_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="index_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="index_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="index_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="index_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="index_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":false},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
+        }
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
+              }
+            }
+          } 
+        });
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
+          }
+        });
+      
+      };
+      
+    })();
+              </script>
+    
+
+</body></html>
