@@ -35,11 +35,6 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Export slides to PDF with decktape
-        # The runner's uid has no home directory inside the decktape image, so
-        # run the container as its default (root) user to let Chromium launch.
-        # PDFs owned by root are fine on an ephemeral runner.
-        env:
-          DECKTAPE_NO_USER_REMAP: "1"
         run: bash _render_pdf.sh
 
       - name: Upload slide PDFs
