@@ -48,3 +48,10 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _slides
+
+      - name: Upload rendered slides for PDF export
+        uses: actions/upload-artifact@v4
+        with:
+          name: slides-html
+          path: _slides
+          retention-days: 1
