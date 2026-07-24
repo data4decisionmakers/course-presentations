@@ -1,0 +1,45 @@
+name: Export slides to PDF
+
+# Runs after the "Quarto publish" workflow finishes rendering the HTML slides.
+# It downloads the rendered _slides/ produced by that run and converts each deck
+# to PDF with decktape (via the _render_pdf.sh script), then uploads the PDFs as
+# a build artifact. Kept separate from publish.yml so a decktape failure never
+# marks the publish run as failed.
+
+on:
+  workflow_run:
+    workflows: ["Quarto publish"]
+    types: [completed]
+  workflow_dispatch:
+
+jobs:
+  export-pdf:
+    runs-on: ubuntu-latest
+    # Only run when the triggering publish workflow actually succeeded (skip on
+    # failed/cancelled runs). workflow_dispatch has no triggering run, so allow
+    # it through as well.
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      github.event.workflow_run.conclusion == 'success'
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Download rendered slides
+        uses: actions/download-artifact@v4
+        with:
+          name: slides-html
+          path: _slides
+          # For workflow_run, the artifact lives in the triggering run rather
+          # than this one, so we fetch it by run id. (Ignored for manual runs.)
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Export slides to PDF with decktape
+        run: bash _render_pdf.sh
+
+      - name: Upload slide PDFs
+        uses: actions/upload-artifact@v4
+        with:
+          name: slide-pdfs
+          path: pdf/
+          if-no-files-found: error
