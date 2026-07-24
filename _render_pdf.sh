@@ -66,9 +66,15 @@ mkdir -p "${PDF_DIR}"
 
 # convert each deck ------------------------------------------------------------
 
-# Run the container as the current user so the generated PDFs are owned by you
-# rather than by root.
-USER_FLAG=(--user "$(id -u):$(id -g)")
+# Run the container as the current host user so the generated PDFs are owned by
+# you rather than by root. Some environments (e.g. CI runners, where the host
+# uid has no home directory inside the container) must NOT remap the user, or
+# Chromium fails to launch ("chrome_crashpad_handler: --database is required").
+# Set DECKTAPE_NO_USER_REMAP=1 to run as the image's default (root) user.
+USER_FLAG=()
+if [[ -z "${DECKTAPE_NO_USER_REMAP:-}" ]]; then
+  USER_FLAG=(--user "$(id -u):$(id -g)")
+fi
 
 converted=0
 while IFS= read -r html; do
@@ -98,6 +104,8 @@ while IFS= read -r html; do
     -v "${SLIDES_DIR}:/slides" \
     -v "${PDF_DIR}:/pdf" \
     "${DECKTAPE_IMAGE}" reveal \
+    --chrome-arg=--no-sandbox \
+    --chrome-arg=--disable-dev-shm-usage \
     "/slides/${rel}" \
     "/pdf/${track}/${deck_name}.pdf"
 
